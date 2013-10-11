@@ -195,7 +195,7 @@ if (!defined('INIT_NO_SMARTY'))
     {
         $smarty->assign('ecs_css_path', 'themes/' . $_CFG['template'] . '/style.css');
     }
-
+	$smarty->assign('ecs_tpl_path', 'themes/' . $_CFG['template'] . '/style/');
 }
 
 if (!defined('INIT_NO_USERS'))

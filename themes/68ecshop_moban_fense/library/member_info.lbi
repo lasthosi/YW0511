@@ -4,6 +4,6 @@
 <a href="user.php"><span>【</span><span style="color:red;">{$lang.user_center}</span><span>】</span></a>
 <a href="user.php?act=logout">{$lang.user_logout}</a>
 {else}
-<span>{$lang.hello}，{$lang.welcome}！</span><a data-help="link" href="user.php">【登录】</a>  
+<span>{$lang.welcome}!&nbsp;</span><a data-help="link" href="user.php">【登录】</a>  
 <a data-help="link" href="user.php?act=register">【免费注册】</a>
 {/if}
