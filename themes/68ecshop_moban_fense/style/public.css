@@ -3,15 +3,16 @@ html, body {
     margin: 0px;
     padding: 0px;
     font-size: 12px;
+    color: #4f4f4f;
 }
 
 a {
     text-decoration: none;
-    color: #f08300;
+    color: #4f4f4f;
 }
 
     a:hover {
-        color: #ba6600;
+        color: #ff4400;
     }
 
 div.head {
@@ -25,7 +26,7 @@ div.head {
     div.head div.in {
         height: 30px;
         line-height: 30px;
-        width: 1026px;
+        width: 1126px;
         margin: 0px auto;
         overflow: visible;
         _zoom: 1;
@@ -44,6 +45,67 @@ div.head {
             overflow: visible;
             _zoom: 1;
         }
+
+        div.head div.in * {
+            vertical-align: middle;
+        }
+
+        div.head div.in span.vr {
+            display: inline-block;
+            _display: inline;
+            _zoom: 1;
+            margin: 0px;
+            padding: 8px 8px;
+            height: 14px;
+            overflow: hidden;
+        }
+
+            div.head div.in span.vr span {
+                height: 100%;
+                display: block;
+                _zoom: 1;
+                overflow: hidden;
+                width: 1px;
+                background-color: #969696;
+            }
+
+        div.head div.in span.ico {
+            background-position: center center;
+            display: inline-block;
+            _display: inline;
+            _zoom: 1;
+            overflow: hidden;
+            background-repeat: no-repeat;
+            height: 20px;
+            margin: 5px 5px 5px 0px;
+        }
+
+        div.head div.in a.kefu span.ico {
+            background-image: url('ico-kefu.png');
+            width: 25px;
+            _background-image: none;
+            _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/themes/68ecshop_moban_fense/style/ico-kefu.png',sizingMethod='scale');
+            vertical-align: middle;
+        }
+
+        div.head div.in a.tel span.ico {
+            background-image: url('ico-tel.png');
+            width: 25px;
+            _background-image: none;
+            _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/themes/68ecshop_moban_fense/style/ico-tel.png',sizingMethod='scale');
+            vertical-align: middle;
+        }
+
+div.head-body {
+    width: 1126px;
+    margin: 0px auto;
+}
+
+    div.head-body div.show {
+        height: 102px;
+        background-image: url('head-show-1.png');
+        background-repeat: no-repeat;
+    }
 
 div.hr-top {
     width: 100%;

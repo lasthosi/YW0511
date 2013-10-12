@@ -1,11 +1,30 @@
 ﻿<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 {insert_scripts files='yanshi.js'}
-<div class="head">
+<div class="head" data-clear-space="true">
 	<div class="in">
 		<div class="left">{insert name='member_info'}</div>
 		<div class="right">    
-			<a id="btn-kefu" href="#">在线客服</a>
+			<a class="kefu" href="#"><span class="ico"></span><span>在线客服</span></a><span class="vr"><span></span></span>
+			<a class="tel"><span class="ico"></span><span>销售/客服4008-xxx-xxx</span></a>
 		</div>
 	</div>
 </div>
-  
+<div class="head-body">
+	<div class="show"></div>
+	<div class="tool">
+		<div class="left">
+<form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" style="_position:relative; top:5px;">
+<input type="hidden" value="搜索" name="imageField"/>
+<input type="hidden" value="商品" name="search_type"/>
+<div class="select">
+	<a {if $display_type neq '0' or $display_type neq '1'} selected {/if}>商品</a>
+	<a {if $display_type eq '0'} selected {/if}>农户</a>
+	<a {if $display_type eq '1'} selected {/if}>菜谱</a>
+</div>
+<input name="keywords" type="text" class="keypaz" id="keyword" value="{$search_keywords|escape}"/>  
+<button class="submit" type="submit"></button>
+</form>
+		</div>
+		<div class="right"></div>
+	</div>
+</div>
