@@ -1,5 +1,6 @@
 ﻿<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 {insert_scripts files='yanshi.js'}
+{insert_scripts files='header.js'}
 <div class="head" data-clear-space="true">
 	<div class="in">
 		<div class="left">{insert name='member_info'}</div>
@@ -12,19 +13,24 @@
 <div class="head-body">
 	<div class="show"></div>
 	<div class="tool">
-		<div class="left">
-<form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" style="_position:relative; top:5px;">
-<input type="hidden" value="搜索" name="imageField"/>
-<input type="hidden" value="商品" name="search_type"/>
-<div class="select">
-	<a {if $display_type neq '0' or $display_type neq '1'} selected {/if}>商品</a>
-	<a {if $display_type eq '0'} selected {/if}>农户</a>
-	<a {if $display_type eq '1'} selected {/if}>菜谱</a>
-</div>
-<input name="keywords" type="text" class="keypaz" id="keyword" value="{$search_keywords|escape}"/>  
-<button class="submit" type="submit"></button>
-</form>
+		<div class="search">
+			<div class="form">
+				<form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" style="_position:relative; top:5px;">
+					<input type="hidden" value="搜索" name="imageField"/>
+					<input type="hidden" value="{if $display_type == '0'}农户{elseif $display_type == '1'}菜谱{else}商品{/if}" name="search_type" id="search_type"/>
+					<div class="select"><a>商品</a><a>农户</a><a>菜谱</a></div><input name="keywords" type="text" class="keywords" id="keywords" value="{$search_keywords|escape}"/><button class="submit" type="submit">搜索</button>
+				</form>
+			</div>
+			<div class="hot">{if $searchkeywords}
+			   {foreach from=$searchkeywords item=val}
+			   <a href="search.php?keywords={$val|escape:url}">{$val}</a>
+			   {/foreach}
+		   {/if}
+			</div>
 		</div>
-		<div class="right"></div>
+		<div class="right">
+			<div class="info user"><a><span class="ico"></span><span>我的本来</span></a><div class="content"></div></div>
+			<div class="info buy-cart"><a><span class="ico"></span><span>购物车</span><span id="buy-cart-count"></span><span>件</span></a><div class="content"></div></div>
+		</div>
 	</div>
 </div>

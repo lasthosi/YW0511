@@ -12,8 +12,25 @@ a {
 }
 
     a:hover {
-        color: #ff4400;
+        color: #f40;
     }
+
+.vm_f {
+    width: 0px;
+    overflow: hidden;
+    display: inline-block;
+    _display: inline;
+    _zoom: 1;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.vm {
+    display: inline-block;
+    _display: inline;
+    _zoom: 1;
+    vertical-align: middle;
+}
 
 div.head {
     height: 30px;
@@ -99,6 +116,8 @@ div.head {
 div.head-body {
     width: 1126px;
     margin: 0px auto;
+    _zoom: 1;
+    overflow: visible;
 }
 
     div.head-body div.show {
@@ -106,6 +125,158 @@ div.head-body {
         background-image: url('head-show-1.png');
         background-repeat: no-repeat;
     }
+
+    div.head-body div.tool {
+        background-position: 10px 38px;
+        overflow: visible;
+        _zoom: 1;
+        background-image: url('logo.gif');
+        background-repeat: no-repeat;
+        height: 154px;
+        position: relative;
+    }
+
+        div.head-body div.tool div.search {
+            float: left;
+            _zoom: 1;
+            overflow: visible;
+            position: absolute;
+            left: 350px;
+            top: 46px;
+        }
+
+            div.head-body div.tool div.search div.form {
+                height: 34px;
+                border: solid 2px #f40;
+                overflow: visible;
+                width: 400px;
+                padding-left: 60px;
+            }
+
+                div.head-body div.tool div.search div.form div.select {
+                    width: 58px;
+                    height: 32px;
+                    background-color: #fff;
+                    border: solid 1px #f6f6f6;
+                    border-right-color: #e5e5e5;
+                    overflow: hidden;
+                    _zoom: 1;
+                    float: left;
+                    position: absolute;
+                    left: 2px;
+                    top: 2px;
+                }
+
+                    div.head-body div.tool div.search div.form div.select.hover {
+                        border-color: #e5e5e5;
+                    }
+
+                    div.head-body div.tool div.search div.form div.select a {
+                        display: block;
+                        _zoom: 1;
+                        width: 100%;
+                        line-height: 32px;
+                        text-align: center;
+                        background-color: #fff;
+                        cursor: default;
+                    }
+
+                        div.head-body div.tool div.search div.form div.select a:hover {
+                            background-color: #f6f6f6;
+                        }
+
+                        div.head-body div.tool div.search div.form div.select a.current {
+                            background-position: 47px center;
+                            overflow: hidden;
+                            background-color: #f6f6f6;
+                            background-image: url('slide-down.gif');
+                            background-repeat: no-repeat;
+                        }
+
+                    div.head-body div.tool div.search div.form div.select.hover a.current {
+                        background-image: url('slide-up.gif');
+                    }
+
+                div.head-body div.tool div.search div.form input.keywords {
+                    float: left;
+                    background: none;
+                    background-color: #fff;
+                    border: none;
+                    padding: 0px;
+                    margin: 0px;
+                    height: 34px;
+                    width: 340px;
+                    vertical-align: middle;
+                    line-height: 34px;
+                }
+
+                    div.head-body div.tool div.search div.form input.keywords:focus {
+                        outline: none;
+                    }
+
+                div.head-body div.tool div.search div.form button {
+                    background: none;
+                    background-color: #f40;
+                    border: none;
+                    line-height: 34px;
+                    height: 34px;
+                    text-align: center;
+                    color: #fff;
+                    margin: 0px;
+                    vertical-align: middle;
+                    width: 60px;
+                    float: left;
+                    font-size: 16px;
+                    font-family: 'Microsoft YaHei',SimSun;
+                    cursor: pointer;
+                }
+
+                    div.head-body div.tool div.search div.form button:hover {
+                        background-color: #e53d00;
+                    }
+
+            div.head-body div.tool div.search div.hot {
+                line-height: 26px;
+                overflow: hidden;
+                clear: both;
+            }
+
+                div.head-body div.tool div.search div.hot a {
+                    padding-right: 5px;
+                }
+
+        div.head-body div.tool div.right {
+            position: absolute;
+            overflow: visible;
+            right: 0px;
+            top: 50px;
+            _zoom: 1;
+        }
+
+            div.head-body div.tool div.right div.info {
+                position: relative;
+                float: left;
+                overflow: visible;
+                _zoom: 1;
+            }
+
+                div.head-body div.tool div.right div.info a {
+                    background-image: url('head-info-btn.png');
+                    background-repeat: no-repeat;
+                    background-position: left top;
+                    display: block;
+                    _zoom: 1;
+                    width: 128px;
+                    height: 28px;
+                    line-height: 28px;
+                    color: #fff;
+                    margin-left: 10px;
+                    text-align: center;
+                }
+
+                    div.head-body div.tool div.right div.info a * {
+                        vertical-align: middle;
+                    }
 
 div.hr-top {
     width: 100%;
