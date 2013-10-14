@@ -21,16 +21,40 @@
 					<div class="select"><a>商品</a><a>农户</a><a>菜谱</a></div><input name="keywords" type="text" class="keywords" id="keywords" value="{$search_keywords|escape}"/><button class="submit" type="submit">搜索</button>
 				</form>
 			</div>
-			<div class="hot">{if $searchkeywords}
+			<div class="hot">
+			{if $searchkeywords}
 			   {foreach from=$searchkeywords item=val}
 			   <a href="search.php?keywords={$val|escape:url}">{$val}</a>
 			   {/foreach}
-		   {/if}
+			{/if}
 			</div>
 		</div>
-		<div class="right">
-			<div class="info user"><a><span class="ico"></span><span>我的本来</span></a><div class="content"></div></div>
-			<div class="info buy-cart"><a><span class="ico"></span><span>购物车</span><span id="buy-cart-count"></span><span>件</span></a><div class="content"></div></div>
+		<input type="hidden" value="{$smarty.session.user_id}" id="user_id" name="user_id"/>
+		<div class="right" data-clear-space="true">
+			<div class="info user">
+				<div class="tab"><a href="http://www.yw0511.com/user.php"><span class="ico"></span><span>我的原味</span></a></div>
+				<div class="content">
+					<div class="first-line">
+						{if $smarty.session.user_id > 0}
+						<span>{$lang.welcome_return}！</span>
+						{else}
+						<span>您好，请先登录</span><a href="user.php">登录原味</a> 
+						{/if}
+					</div>
+					<div class="links">
+						<a href="user.php?act=comment_list">我的评论</a>
+						<a href="user.php?act=order_list">我的订单</a>
+						<a href="user.php?act=good_food">原味分享</a>
+						<a href="user.php?act=address_list">我的地址</a>
+						<a href="user.php?act=profile">我的信息</a>
+						<a href="user.php?act=collection_list">我的收藏</a>
+						<a href="user.php?act=message_list">我的留言</a>
+						<a href="user.php?act=taocan">套餐管理</a>
+					</div>
+				</div>
+			</div>
+			<div class="info buy-cart"><div class="tab"><a><span class="ico"></span><span>购物车</span><span id="buy-cart-count"></span><span>件</span></a></div><div class="content"></div></div>
 		</div>
 	</div>
+	<div class="hr-top"></div>
 </div>

@@ -260,29 +260,133 @@ div.head-body {
                 _zoom: 1;
             }
 
-                div.head-body div.tool div.right div.info a {
+                div.head-body div.tool div.right div.info div.tab {
                     background-image: url('head-info-btn.png');
                     background-repeat: no-repeat;
                     background-position: left top;
-                    display: block;
                     _zoom: 1;
-                    width: 128px;
+                    overflow: hidden;
                     height: 28px;
-                    line-height: 28px;
-                    color: #fff;
+                    width: 128px;
                     margin-left: 10px;
-                    text-align: center;
                 }
 
-                    div.head-body div.tool div.right div.info a * {
+                    div.head-body div.tool div.right div.info div.tab a {
+                        display: block;
+                        _zoom: 1;
+                        overflow: hidden;
+                        height: 16px;
+                        line-height: 16px;
+                        margin: 6px 1px;
+                        color: #fff;
+                        text-align: center;
+                        position: relative;
+                        z-index: 2;
+                    }
+
+                        div.head-body div.tool div.right div.info div.tab a * {
+                            vertical-align: middle;
+                        }
+
+                        div.head-body div.tool div.right div.info div.tab a span.ico {
+                            background-position: center center;
+                            width: 16px;
+                            height: 16px;
+                            position: absolute;
+                            left: 7px;
+                            top: 0px;
+                        }
+
+                div.head-body div.tool div.right div.info.user div.tab a span.ico {
+                    background-image: url('ico-user-info.png');
+                    background-repeat: no-repeat;
+                    _background-image: none;
+                    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/themes/68ecshop_moban_fense/style/ico-user-info.png',sizingMethod='scale');
+                }
+
+                div.head-body div.tool div.right div.info.buy-cart div.tab a span.ico {
+                    background-image: url('ico-buy-car.png');
+                    background-repeat: no-repeat;
+                    _background-image: none;
+                    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/themes/68ecshop_moban_fense/style/ico-buy-car.png',sizingMethod='scale');
+                }
+
+                div.head-body div.tool div.right div.info div.content {
+                    position: absolute;
+                    z-index: 1;
+                    border: solid 1px #7d7d7d;
+                    right: 0px;
+                    top: 22px;
+                    width: 260px;
+                    display: none;
+                    background-color: #fff;
+                    padding: 5px;
+                }
+
+                div.head-body div.tool div.right div.info div.tab.login {
+                    background-image: url('head-info-login.png');
+                }
+
+                div.head-body div.tool div.right div.info div.tab.active {
+                    background-image: url('head-info-tab.png');
+                }
+
+                    div.head-body div.tool div.right div.info div.tab.active a {
+                        color: #7d7d7d;
+                        margin-bottom: 5px;
+                        border-bottom: solid 1px #fff;
+                    }
+
+                div.head-body div.tool div.right div.info.user div.tab.active a span.ico {
+                    background-image: url('ico-user-info-active.png');
+                    background-repeat: no-repeat;
+                    _background-image: none;
+                    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/themes/68ecshop_moban_fense/style/ico-user-info-active.png',sizingMethod='scale');
+                }
+
+                div.head-body div.tool div.right div.info.buy-cart div.tab.active a span.ico {
+                    background-image: url('ico-buy-car-active.png');
+                    background-repeat: no-repeat;
+                    _background-image: none;
+                    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/themes/68ecshop_moban_fense/style/ico-buy-car-active.png',sizingMethod='scale');
+                }
+
+                div.head-body div.tool div.right div.info div.content div.first-line {
+                    border-bottom: solid 1px #4f4f4f;
+                    overflow: hidden;
+                    _zoom: 1;
+                    line-height: 30px;
+                }
+
+                    div.head-body div.tool div.right div.info div.content div.first-line a {
+                        display: block;
+                        float: right;
+                        line-height: 30px;
+                        padding: 0px 5px;
+                    }
+
+                div.head-body div.tool div.right div.info div.content div.links {
+                }
+
+                    div.head-body div.tool div.right div.info div.content div.links a {
+                        display: inline-block;
+                        _display: inline;
+                        _zoom: 1;
+                        width: 115px;
+                        height: 26px;
+                        line-height: 26px;
                         vertical-align: middle;
+                        text-align: left;
+                        padding-left: 5px;
+                        margin-left: 5px;
+                        border-bottom: dotted 1px #d5d5d5;
                     }
 
 div.hr-top {
-    width: 100%;
     padding: 0px;
     margin: 0px;
     overflow: hidden;
     _zoom: 1;
-    height: 10px;
+    height: 2px;
+    background-color: #f40;
 }
