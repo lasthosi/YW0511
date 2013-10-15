@@ -12,7 +12,7 @@ a {
 }
 
     a:hover {
-        color: #f40;
+        color: #ffb359;
     }
 
 .vm_f {
@@ -147,7 +147,7 @@ div.head-body {
 
             div.head-body div.tool div.search div.form {
                 height: 34px;
-                border: solid 2px #f40;
+                border: solid 2px #e53d00;
                 overflow: visible;
                 width: 400px;
                 padding-left: 60px;
@@ -216,7 +216,7 @@ div.head-body {
 
                 div.head-body div.tool div.search div.form button {
                     background: none;
-                    background-color: #f40;
+                    background-color: #e53d00;
                     border: none;
                     line-height: 34px;
                     height: 34px;
@@ -232,7 +232,7 @@ div.head-body {
                 }
 
                     div.head-body div.tool div.search div.form button:hover {
-                        background-color: #e53d00;
+                        background-color: #b63100;
                     }
 
             div.head-body div.tool div.search div.hot {
@@ -388,5 +388,97 @@ div.hr-top {
     overflow: hidden;
     _zoom: 1;
     height: 2px;
-    background-color: #f40;
+    background-color: #a40014;
+    clear: both;
 }
+
+div.hr-1 {
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    _zoom: 1;
+    height: 10px;
+    clear: both;
+}
+
+
+div.body {
+    width: 1126px;
+    margin: 0px auto;
+}
+
+    div.body div.col {
+        _zoom: 1;
+        overflow: visible;
+    }
+
+        div.body div.col.left {
+            float: left;
+            _zoom: 1;
+            width: 220px;
+        }
+
+        div.body div.col.right {
+            float: right;
+            width: 896px;
+            overflow: hidden;
+            height: 1000px;
+            background-color: #e4e4e4;
+        }
+
+        div.body div.col.left div.navc {
+            background-color: #f8f8f8;
+            border: solid 1px #004107;
+        }
+
+            div.body div.col.left div.navc div.title {
+                line-height: 40px;
+                font-size: 18px;
+                font-weight: bold;
+                color: #fff;
+                text-align: center;
+                background-color: #004107;
+            }
+
+            div.body div.col.left div.navc div.link {
+                cursor: default;
+                padding: 1px 10px;
+                border-bottom: solid 1px #eee;
+                border-top: solid 1px #fff;
+            }
+
+            div.body div.col.left div.navc div.i {
+            }
+
+            div.body div.col.left div.navc div.link a {
+                background-position: 180px center;
+                display: block;
+                _zoom: 1;
+                cursor: pointer;
+                line-height: 40px;
+                font-size: 20px;
+                color: #004107;
+                padding-left: 5px;
+                background-image: url('slide-up.gif');
+                background-repeat: no-repeat;
+                font-family: SimSun;
+                font-weight: bold;
+            }
+
+                div.body div.col.left div.navc div.link a.close {
+                    background-image: url('slide-up.gif');
+                }
+
+            div.body div.col.left div.navc div.panel {
+            }
+
+                div.body div.col.left div.navc div.panel a {
+                    background-position: 17px center;
+                    display: block;
+                    line-height: 24px;
+                    padding-left: 40px;
+                    border-bottom: solid 1px #eee;
+                    border-top: solid 1px #fff;
+                    background-image: url('navc-head.gif');
+                    background-repeat: no-repeat;
+                }

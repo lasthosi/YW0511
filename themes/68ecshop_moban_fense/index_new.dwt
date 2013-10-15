@@ -18,11 +18,19 @@
 </head>
 <body>
 <!-- #BeginLibraryItem "/library/new_page_header_a.lbi" --><!-- #EndLibraryItem -->
-<div class="hr-top"></div>
+<div class="body">
+	<div class="col left"><!-- #BeginLibraryItem "/library/new_category_tree.lbi" --><!-- #EndLibraryItem --></div>
+	<div class="col right"></div>
+	<div class="hr-1"></div>
+	<div class="footer"></div>
+</div>
+
+
+
 <div class="block clearfix">
   <div id="pageLeft" class="fl">
   
-	<!-- #BeginLibraryItem "/library/category_tree.lbi" --><!-- #EndLibraryItem -->
+	
 	<!-- TemplateBeginEditable name="左边区域" -->
     
 <!-- TemplateEndEditable -->
