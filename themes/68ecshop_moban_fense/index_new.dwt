@@ -19,7 +19,7 @@
 <body>
 <!-- #BeginLibraryItem "/library/new_page_header_a.lbi" --><!-- #EndLibraryItem -->
 <div class="body">
-	<div class="col left"><!-- #BeginLibraryItem "/library/new_category_tree.lbi" --><!-- #EndLibraryItem --></div>
+	<div class="col left"></div>
 	<div class="col right"></div>
 	<div class="hr-1"></div>
 	<div class="footer"></div>

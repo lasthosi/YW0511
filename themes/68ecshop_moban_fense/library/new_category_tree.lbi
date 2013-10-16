@@ -1,10 +1,10 @@
 ﻿<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <div class="navc" data-clear-space="true">
 	<div>
-		<div class="title">原味生活商品分类</div>
+		<div class="title"><span class="ico"></span><span>原味商品分类</span></div>
 		<!--{foreach from=get_categories_tree() item=cat name=name}-->
 		<div class="i">
-			<div class="link"><a>{$cat.name|escape:html}</a></div>
+			<div class="link"><a href="{$cat.url}">{$cat.name|escape:html}</a></div>
 			<div class="panel">
 				<!--{foreach name=childs from=$cat.cat_id item=child}-->
 				<a href="{$child.url}">{$child.name|escape:html}</a>

@@ -56,6 +56,13 @@
 			<div class="info buy-cart"><div class="tab"><a><span class="ico"></span><span>购物车</span><span id="buy-cart-count"></span><span>件</span></a></div><div class="content"></div></div>
 		</div>
 	</div>
-	<div class="hr-top"></div>
+	<div class="nav">
+		{include file="/library/new_category_tree.lbi"}
+		<div class="bar">
+			<div class="tab" data-clear-space="true">
+				<a class="active">首页</a><a>原味特色</a><a>放心民</a><a>消费者监督沙龙</a>
+			</div>
+		</div>
+	</div>
 	<div class="hr-1"></div>
 </div>

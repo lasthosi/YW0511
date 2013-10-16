@@ -61,4 +61,70 @@ $(document).ready(function () {
             tgt.children('div.tab').removeClass('active');
         });
     });
+
+    // 分类菜单
+    $('div.head-body>div.nav>div.navc').mouseenter(function () {
+        var tgt = $(this);
+        tgt.stop();
+        var h = tgt.height();
+        tgt.css('height', 'auto');
+        var toh = tgt.height();
+        tgt.css('height', h);
+        tgt.stop().animate({ height: toh }, 450, function () {
+            $(this).css('overflow', 'visible');
+        });
+    });
+    $('div.head-body>div.nav>div.navc').mouseleave(function () {
+        var tgt = $(this);
+        tgt.stop();
+        var h = tgt.height();
+        tgt.css('height', '');
+        var toh = tgt.height();
+        tgt.css('height', h);
+        $(this).css('overflow', 'hidden');
+        tgt.stop().animate({ height: toh }, 450, function () {
+            $(this).css('height', '');
+        });
+    });
+    $('div.head-body>div.nav>div.navc').delegate('div.i', 'mouseenter', function (e) {
+        var tgt = $(e.currentTarget);
+        var p = tgt.children('.panel');
+        if (p.children().size() == 0) return;
+        tgt.children('.link').addClass('open');
+        p.stop();
+        p.css('top', 0);
+        p.css('display', 'block');
+        var w = p.width(), pos = p.offset(), doc = $(document);
+        var win = $(window), win_h = win.height();
+        var top = pos.top - doc.scrollTop(), bottom = top + p.outerHeight();
+        var dy = 0;
+        var itop = tgt.offset().top - doc.scrollTop(), ibottom = itop + tgt.outerHeight();
+        bottom = Math.min(bottom, ibottom);
+        if (bottom > win_h) {
+            dy += win_h - bottom;
+            top += dy;
+        }
+        top = Math.max(top, itop);
+        if (top < 0) {
+            dy -= top;
+        }
+        var ani = {
+        };
+        if (dy > 0) {
+            ani.top = '+=' + dy;
+        } else if (dy < 0) {
+            ani.top = '-=' + (-dy);
+        }
+        p.css('opacity', 0);
+        p.animate({ opacity: 1 }, 500);
+        p.animate(ani, 150);
+    }).delegate('div.i', 'mouseleave', function (e) {
+        var tgt = $(e.currentTarget);
+        var p = tgt.children('.panel');
+        if (p.children().size() == 0) return;
+        p.stop();
+        tgt.children('.link').removeClass('open');
+        p.css('display', 'none');
+        p.css('top', 0);
+    });
 });
