@@ -26,7 +26,7 @@
 </head>
 <body>
 <!-- #BeginLibraryItem "/library/page_header2.lbi" --><!-- #EndLibraryItem -->
-<div class="mx-hr-top"></div>
+<div class="body"></div>
 <div class="block clearfix">
   <div id="pageLeft" class="fl">
   

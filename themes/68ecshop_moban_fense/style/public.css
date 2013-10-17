@@ -456,11 +456,81 @@ div.head-body {
                     line-height: 34px;
                     font-size: 14px;
                     color: #444;
-                    padding-left: 50px;
+                    padding-left: 16px;
                     background-image: url('slide-right.gif');
                     background-repeat: no-repeat;
                     font-family: 'Microsoft YaHei';
                 }
+
+                    div.head-body div.nav div.navc div.link a span {
+                        vertical-align: middle;
+                    }
+
+                        div.head-body div.nav div.navc div.link a span.ico {
+                            background-position: center center;
+                            display: inline-block;
+                            _display: inline;
+                            _zoom: 1;
+                            overflow: hidden;
+                            width: 18px;
+                            height: 18px;
+                            margin: 8px;
+                            background-repeat: no-repeat;
+                        }
+
+                            div.head-body div.nav div.navc div.link a span.ico.cat12 {
+                                background-image: url('ico-cat-12.png');
+                                _background: none;
+                                _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/themes/68ecshop_moban_fense/style/ico-cat-12.png',sizingMethod='scale');
+                            }
+
+                            div.head-body div.nav div.navc div.link a span.ico.cat16 {
+                                background-image: url('ico-cat-16.png');
+                                _background: none;
+                                _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/themes/68ecshop_moban_fense/style/ico-cat-16.png',sizingMethod='scale');
+                            }
+
+                            div.head-body div.nav div.navc div.link a span.ico.cat6 {
+                                background-image: url('ico-cat-6.png');
+                                _background: none;
+                                _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/themes/68ecshop_moban_fense/style/ico-cat-6.png',sizingMethod='scale');
+                            }
+
+                            div.head-body div.nav div.navc div.link a span.ico.cat45 {
+                                background-image: url('ico-cat-45.png');
+                                _background: none;
+                                _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/themes/68ecshop_moban_fense/style/ico-cat-45.png',sizingMethod='scale');
+                            }
+
+                            div.head-body div.nav div.navc div.link a span.ico.cat47 {
+                                background-image: url('ico-cat-47.png');
+                                _background: none;
+                                _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/themes/68ecshop_moban_fense/style/ico-cat-47.png',sizingMethod='scale');
+                            }
+
+                            div.head-body div.nav div.navc div.link a span.ico.cat63 {
+                                background-image: url('ico-cat-63.png');
+                                _background: none;
+                                _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/themes/68ecshop_moban_fense/style/ico-cat-63.png',sizingMethod='scale');
+                            }
+
+                            div.head-body div.nav div.navc div.link a span.ico.cat64 {
+                                background-image: url('ico-cat-64.png');
+                                _background: none;
+                                _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/themes/68ecshop_moban_fense/style/ico-cat-64.png',sizingMethod='scale');
+                            }
+
+                            div.head-body div.nav div.navc div.link a span.ico.cat78 {
+                                background-image: url('ico-cat-78.png');
+                                _background: none;
+                                _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/themes/68ecshop_moban_fense/style/ico-cat-78.png',sizingMethod='scale');
+                            }
+
+                            div.head-body div.nav div.navc div.link a span.ico.cat80 {
+                                background-image: url('ico-cat-80.png');
+                                _background: none;
+                                _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/themes/68ecshop_moban_fense/style/ico-cat-80.png',sizingMethod='scale');
+                            }
 
                     div.head-body div.nav div.navc div.link a:hover {
                         color: #f40;
@@ -536,7 +606,7 @@ div.hr-1 {
     margin: 0px;
     overflow: hidden;
     _zoom: 1;
-    height: 10px;
+    height: 4px;
     clear: both;
 }
 

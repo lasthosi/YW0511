@@ -61,7 +61,20 @@ body {
         line-height: 30px;
         height: auto;
         width: auto;
+        color: #f40;
     }
+
+        .head a:link {
+            color: #f40;
+        }
+
+        .head a:visited {
+            color: #f40;
+        }
+
+        .head a:hover {
+            color: #000;
+        }
 
     .head span.username {
         color: red;
