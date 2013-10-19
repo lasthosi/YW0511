@@ -1,7 +1,7 @@
 ﻿<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <div class="navc" data-clear-space="true">
 	<div>
-		<div class="title"><span class="ico"></span><span>原味商品分类</span></div>
+		<div class="title"><span>原味商品分类</span><span class="ico"></span></div>
 		<!--{foreach from=get_categories_tree() item=cat name=name}-->
 		<div class="i">
 			<div class="link"><a href="{$cat.url}"><span class="ico cat{$cat.id}"></span><span>{$cat.name|escape:html}</span></a></div>
