@@ -20,19 +20,26 @@
 <!-- #BeginLibraryItem "/library/new_page_header_a.lbi" --><!-- #EndLibraryItem -->
 <div class="body">
 	<!-- #BeginLibraryItem "/library/index_slide.lbi" --><!-- #EndLibraryItem -->
+	
+	<!--
+	说明：
+	分类标题:<div class="title" style="color:#370;">分类标题</div> ，这里的 style="color:#370" 后台
+	-->
 	<div class="hr-1"></div>
 	<div class="index-cat">
 		<div class="title" style="color:#370;">分类标题</div>
 		<div class="line"><div class="in" style="background-color:#370;"></div></div>
 		<div class="panel">
-			<a class="a" href="#"><img src="" /><p class="i"><span class="t">商品标题</span><span class="g">0.25千克</span><span class="p">￥10.0元</span></p></a>
+			<a class="a" href="#"><img src="" /><p class="i"><span class="t">商品标题商品标题商品标题商品标题商品标题</span><span class="g">0.25千克</span><span class="p">￥10.0元</span></p></a>
 			<div class="b">
-				<a class="b" href="#"><img src=""/><p class="i"><span class="t">商品标题</span><span class="g">0.25千克</span><span class="p">￥10.0元</span></p></a>
-				<a class="b" href="#"><img src=""/><p class="i"><span class="t">商品标题</span><span class="g">0.25千克</span><span class="p">￥10.0元</span></p></a>
-				<a class="b" href="#"><img src=""/><p class="i"><span class="t">商品标题</span><span class="g">0.25千克</span><span class="p">￥10.0元</span></p></a>
-				<a class="b" href="#"><img src=""/><p class="i"><span class="t">商品标题</span><span class="g">0.25千克</span><span class="p">￥10.0元</span></p></a>
-				<a class="b" href="#"><img src=""/><p class="i"><span class="t">商品标题</span><span class="g">0.25千克</span><span class="p">￥10.0元</span></p></a>
-				<a class="b" href="#"><img src=""/><p class="i"><span class="t">商品标题</span><span class="g">0.25千克</span><span class="p">￥10.0元</span></p></a>
+				<a class="b" href="#"><img src=""/><p class="i"><span class="t">商品标题商品标题商品标题</span><span class="g">0.25千克</span><span class="p">￥10.0元</span></p></a>
+				<a class="b" href="#"><img src=""/><p class="i"><span class="t">商品标题商品标题</span><span class="g">0.25千克</span><span class="p">￥10.0元</span></p></a>
+				<a class="b" href="#"><img src=""/><p class="i"><span class="t">商品标题商品标题商品标题商品标题商品标题</span><span class="g">0.25千克</span><span class="p">￥10.0元</span></p></a>
+				<a class="b" href="#"><img src=""/><p class="i"><span class="t">商品标题商品标题</span><span class="g">0.25千克</span><span class="p">￥10.0元</span></p></a>
+				<a class="b" href="#"><img src=""/><p class="i"><span class="t">商品标题商品标题商品标题</span><span class="g">0.25千克</span><span class="p">￥10.0元</span></p></a>
+				<a class="b" href="#"><img src=""/><p class="i"><span class="t">商品标题商品标题商品标题商品标题</span><span class="g">0.25千克</span><span class="p">￥10.0元</span></p></a>
+				<a class="b" href="#"><img src=""/><p class="i"><span class="t">商品标题商品标题商品标题商品标题商品标题</span><span class="g">0.25千克</span><span class="p">￥10.0元</span></p></a>
+				<a class="b" href="#"><img src=""/><p class="i"><span class="t">商品标题商品标题商品标题商品标题商品标题商品标题</span><span class="g">0.25千克</span><span class="p">￥10.0元</span></p></a>
 			</div>
 		</div>
 	</div>

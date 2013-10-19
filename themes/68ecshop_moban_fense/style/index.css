@@ -206,15 +206,15 @@ div.index-cat {
     div.index-cat div.panel {
         overflow: hidden;
         _zoom: 1;
-        padding-top: 10px;
+        padding-top: 16px;
     }
 
     div.index-cat a.a {
         display: block;
         float: left;
-        width: 440px;
-        height: 440px;
-        margin-bottom: 18px;
+        width: 368px;
+        height: 368px;
+        margin-bottom: 22px;
         border: solid 1px #eee;
         position: relative;
         overflow: hidden;
@@ -270,16 +270,16 @@ div.index-cat {
 
     div.index-cat div.b {
         float: left;
-        width: 684px;
+        width: 756px;
     }
 
     div.index-cat a.b {
         display: block;
         float: left;
-        width: 210px;
-        height: 210px;
-        margin-bottom: 18px;
-        margin-left: 16px;
+        width: 172px;
+        height: 172px;
+        margin-bottom: 22px;
+        margin-left: 15px;
         border: solid 1px #eee;
         position: relative;
         overflow: hidden;
