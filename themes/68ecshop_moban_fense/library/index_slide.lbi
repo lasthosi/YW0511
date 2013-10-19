@@ -1,0 +1,25 @@
+﻿<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+{insert_scripts files='slide.js'}
+<div id="slide" class="slide" data-speed="700" data-wait-time="3000" data-clear-space="true">
+	<div class="in"><div class="move">
+		{foreach key=a item=b from=$huandengpian_rec}
+		<a href="http://{$b}" target="_blank"><img src="./sosadmin911/huandengimage/1.jpg"></a>
+		{/foreach}
+		{foreach key=a item=b from=$huandengpian_rec2}
+		<a href="http://{$b}" target="_blank"><img src="./sosadmin911/huandengimage/2.jpg"></a>
+		{/foreach}
+		{foreach key=a item=b from=$huandengpian_rec3}
+		<a href="http://{$b}" target="_blank"><img src="./sosadmin911/huandengimage/3.jpg"></a>
+		{/foreach}
+		{foreach key=a item=b from=$huandengpian_rec4}
+		<a href="http://{$b}" target="_blank"><img src="./sosadmin911/huandengimage/4.jpg"></a>
+		{/foreach}
+	</div></div>
+	<div class="nav-outer">
+		<span class="o"><span class="nav"><a></a></span><span class="i"></span></span>
+	</div>
+	<div class="nav-btn"><a class="pre"><span class="f"></span><span class="b"></span></a><a class="next"><span class="f"></span><span class="b"></a></div>
+</div>
+<script>
+$.slide('#slide');
+</script>

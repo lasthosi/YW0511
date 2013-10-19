@@ -60,7 +60,7 @@
 		{include file="/library/new_category_tree.lbi"}
 		<div class="bar">
 			<div class="tab" data-clear-space="true">
-				<a class="active">首页</a><a>原味特色</a><a>放心民</a><a>消费者监督沙龙</a>
+				<a class="active" href="/">首页</a><a class="">原味特色</a><a>放心民</a><a>消费者监督沙龙</a>
 			</div>
 		</div>
 	</div>

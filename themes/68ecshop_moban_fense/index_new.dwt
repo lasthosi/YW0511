@@ -19,17 +19,30 @@
 <body>
 <!-- #BeginLibraryItem "/library/new_page_header_a.lbi" --><!-- #EndLibraryItem -->
 <div class="body">
-	<div class="col left"></div>
-	<div class="col right"></div>
+	<!-- #BeginLibraryItem "/library/index_slide.lbi" --><!-- #EndLibraryItem -->
 	<div class="hr-1"></div>
+	<div class="index-cat">
+		<div class="title" style="color:#370;">分类标题</div>
+		<div class="line"><div class="in" style="background-color:#370;"></div></div>
+		<div class="panel">
+			<a class="a" href="#"><img src="" /><p class="i"><span class="t">商品标题</span><span class="g">0.25千克</span><span class="p">￥10.0元</span></p></a>
+			<div class="b">
+				<a class="b" href="#"><img src=""/><p class="i"><span class="t">商品标题</span><span class="g">0.25千克</span><span class="p">￥10.0元</span></p></a>
+				<a class="b" href="#"><img src=""/><p class="i"><span class="t">商品标题</span><span class="g">0.25千克</span><span class="p">￥10.0元</span></p></a>
+				<a class="b" href="#"><img src=""/><p class="i"><span class="t">商品标题</span><span class="g">0.25千克</span><span class="p">￥10.0元</span></p></a>
+				<a class="b" href="#"><img src=""/><p class="i"><span class="t">商品标题</span><span class="g">0.25千克</span><span class="p">￥10.0元</span></p></a>
+				<a class="b" href="#"><img src=""/><p class="i"><span class="t">商品标题</span><span class="g">0.25千克</span><span class="p">￥10.0元</span></p></a>
+				<a class="b" href="#"><img src=""/><p class="i"><span class="t">商品标题</span><span class="g">0.25千克</span><span class="p">￥10.0元</span></p></a>
+			</div>
+		</div>
+	</div>
 	<div class="footer"></div>
 </div>
 
 
-
+<!-- #BeginLibraryItem "/library/index_article.lbi" --><!-- #EndLibraryItem -->
 <div class="block clearfix">
   <div id="pageLeft" class="fl">
-  
 	
 	<!-- TemplateBeginEditable name="左边区域" -->
     
@@ -38,14 +51,14 @@
 	<div id="pageRight" class="fr clearfix" >
 	 <div class="clearfix blank">
 	  <div class="w574 fl">
-	  <!-- #BeginLibraryItem "/library/index_ad.lbi" --><!-- #EndLibraryItem -->
+	  
    
-	  <!-- #BeginLibraryItem "/library/coming.lbi" --><!-- #EndLibraryItem -->
+	  
       
 	  </div>
 	  
 	 </div>
-	 <div><!-- #BeginLibraryItem "/library/index_article.lbi" --><!-- #EndLibraryItem -->
+	 <div>
 	 </div>     
 	</div>
 </div>

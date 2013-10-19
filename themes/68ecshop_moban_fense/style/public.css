@@ -387,6 +387,7 @@ div.head-body {
         overflow: visible;
         _zoom: 1;
         padding-left: 230px;
+        z-index: 100;
     }
 
         div.head-body div.nav div.navc {
@@ -398,6 +399,7 @@ div.head-body {
             width: 220px;
             height: 40px;
             overflow: hidden;
+            z-index: 110;
         }
 
             div.head-body div.nav div.navc div.title {
@@ -431,6 +433,7 @@ div.head-body {
             div.head-body div.nav div.navc div.i {
                 position: relative;
                 overflow: visible;
+                z-index: 120;
             }
 
             div.head-body div.nav div.navc div.link {
@@ -445,7 +448,7 @@ div.head-body {
                     border-top: solid 1px #370;
                     border-bottom: solid 1px #370;
                     position: relative;
-                    z-index: 1;
+                    z-index: 130;
                 }
 
                 div.head-body div.nav div.navc div.link a {
@@ -546,6 +549,7 @@ div.head-body {
                 border: solid 1px #370;
                 width: 300px;
                 padding: 0px 10px 10px 0px;
+                z-index: 125;
             }
 
                 div.head-body div.nav div.navc div.panel a {
