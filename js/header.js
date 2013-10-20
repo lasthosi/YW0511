@@ -70,9 +70,13 @@ $(document).ready(function () {
         tgt.css('height', 'auto');
         var toh = tgt.height();
         tgt.css('height', h);
-        tgt.stop().animate({ height: toh }, 450, function () {
-            $(this).css('overflow', 'visible');
-        });
+        if (toh > h) {
+            tgt.stop().animate({ height: toh }, 450, function () {
+                $(this).css('overflow', 'visible');
+            });
+        } else {
+            tgt.css('overflow', 'visible');
+        }
     });
     $('div.head-body>div.nav>div.navc').mouseleave(function () {
         var tgt = $(this);

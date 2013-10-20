@@ -1,0 +1,45 @@
+﻿
+
+<div style="width:990px;float:left;">
+<div style="border-left-color: #DCDCDC; border-bottom-color: #DCDCDC; border-right-color: #DCDCDC; border-top-color: #DCDCDC; border-top-style: solid; border-top-width: 5px; background-color:#dcdcdc; padding-left:20px; font-size:14px; float:left; width:470px; font-family:'黑体'; font-weight:bold;">商品相关信息&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="./article_cat.php?id=17" title="查看所有" target="_blank" style=" font-weight:200;">查看所有</a></div>
+
+
+<div style="border-left-color: #DCDCDC; border-bottom-color: #DCDCDC; border-right-color: #DCDCDC; border-top-color: #DCDCDC; border-top-style: solid; border-top-width: 5px; background-color:#dcdcdc; padding-left:20px; font-size:14px; float:right; width:470px; font-family:'黑体'; font-weight:bold;">妈妈的小贴士&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="./article_cat.php?id=18" title="查看所有" target="_blank" style=" font-weight:200;">查看所有</a></div>
+
+
+  <div style=" float:left; width:470px; background-color:white;text-align: left;border:10px solid #dcdcdc;height:110px;overflow:auto;">
+<!--{foreach from=$class_articles_17 item=article}-->
+       <li>
+	   <img src="{$article.file_url}" alt="" /><a href="{$article.url}" title="{$article.title|escape:html}" target="_blank" >{$article.title}</a></li> 
+       <!--{/foreach}--></div>
+
+       <div style="border: 10px solid #DCDCDC; width:470px; float:right; background-color:white; height:110px; text-align: left; height:110px; overflow:auto;">
+
+       <!--{foreach from=$class_articles_18 item=article}-->
+        <li><img src="{$article.file_url}" alt="" />{$article.add_time}<a href="{$article.url}" title="{$article.title|escape:html}" target="_blank">{$article.title}</a></li>
+       <!--{/foreach}-->
+       </div>
+</div>
+<div style="width:990px;float:left; margin-top:10px;">
+
+
+<div style="border-left-color: #DCDCDC; border-bottom-color: #DCDCDC; border-right-color: #DCDCDC; border-top-color: #DCDCDC; border-top-style: solid; border-top-width: 5px; background-color:#dcdcdc; padding-left:20px; font-size:14px; float:left; width:470px;  font-family:'黑体'; font-weight:bold;">安全农业技术展示&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="./article_cat.php?id=19" title="查看所有" target="_blank" style=" font-weight:200;">查看所有</a></div>
+
+
+<div style="border-left-color: #DCDCDC; border-bottom-color: #DCDCDC; border-right-color: #DCDCDC; border-top-color: #DCDCDC; border-top-style: solid; border-top-width: 5px; background-color:#dcdcdc; padding-left:20px; font-size:14px; float:right; width:470px;  font-family:'黑体'; font-weight:bold;">农村走访记&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="./article_cat.php?id=17" title="查看所有" target="_blank" style=" font-weight:200;">查看所有</a></div>
+
+
+  <div style=" float:left; width:470px; background-color:white;text-align: left;border:10px solid #dcdcdc;height:110px;overflow:auto;">
+<!--{foreach from=$class_articles_19 item=article}-->
+       <li><img src="{$article.file_url}" alt="" />{$article.add_time}<a href="{$article.url}" title="{$article.title|escape:html}" target="_blank" >{$article.title}</a></li> 
+       <!--{/foreach}--></div>
+
+       <div style="border: 10px solid #DCDCDC; width:470px; float:right; background-color:white; height:110px; text-align: left; height:110px; overflow:auto;">
+
+       <!--{foreach from=$class_articles_20 item=article}-->
+        <li><img src="{$article.file_url}" alt="" /><a href="{$article.url}" title="{$article.title|escape:html}" target="_blank">{$article.title}</a></li>
+       <!--{/foreach}-->
+       </div>
+
+
+</div>

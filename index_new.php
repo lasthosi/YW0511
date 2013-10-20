@@ -121,10 +121,10 @@ if (!$smarty->is_cached('index_new.dwt', $cache_id))
 		 $smarty->assign('new_articles',    index_get_new_articles());   // 最新首页文章
 
 //调用多个就修改传进去的参数,以及模板接收的变量,其中下面的17就是文章分类ID,其中20是调用数量
-$smarty->assign('class_articles_17',    index_get_class_articles(17,20));
-$smarty->assign('class_articles_18',    index_get_class_articles(18,20));  
-$smarty->assign('class_articles_19',    index_get_class_articles(19,20));
-$smarty->assign('class_articles_20',    index_get_class_articles(20,20)); // 分类调用文章
+$smarty->assign('class_articles_17',    index_get_class_articles(17,5));
+$smarty->assign('class_articles_18',    index_get_class_articles(18,5));  
+$smarty->assign('class_articles_19',    index_get_class_articles(19,5));
+$smarty->assign('class_articles_20',    index_get_class_articles(20,5)); // 分类调用文章
 
 	
     /* 首页主广告设置 */
@@ -443,6 +443,7 @@ function index_get_class_articles($cat_aid, $cat_num)
     {
         $arr[$idx]['id']          = $row['article_id'];
         $arr[$idx]['title']       = $row['title'];
+		$arr[$idx]['file_url']	  = $row['file_url'];
         $arr[$idx]['short_title'] = $GLOBALS['_CFG']['article_title_length'] > 0 ?
                                         sub_str($row['title'], $GLOBALS['_CFG']['article_title_length']) : $row['title'];
      if($row['article_type'] == 1) { $arr[$idx]['title'] =$arr[$idx]['title'] ."<font color=red> (new)</font>";} //置顶的文章显示红色

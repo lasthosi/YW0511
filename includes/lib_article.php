@@ -47,7 +47,7 @@ function get_cat_articles($cat_id, $page = 1, $size = 20 ,$requirement='',$user_
     if ($requirement != '')
     {
 		
-        $sql = 'SELECT article_id, title, author, add_time, file_url, open_type,user_id,hot_num' .
+        $sql = 'SELECT article_id, title, author, add_time, file_url, open_type, user_id, hot_num' .
                ' FROM ' .$GLOBALS['ecs']->table('article') .
                " WHERE  is_open = 1 AND title like '%$requirement%' " .
                ' ORDER BY article_type DESC, article_id DESC';
@@ -55,7 +55,7 @@ function get_cat_articles($cat_id, $page = 1, $size = 20 ,$requirement='',$user_
     else 
     {
         
-        $sql = 'SELECT article_id, title, author, add_time, file_url, open_type,user_id,hot_num' .
+        $sql = 'SELECT article_id, title, author, add_time, file_url, open_type, user_id, hot_num' .
                ' FROM ' .$GLOBALS['ecs']->table('article') .
                " WHERE $wheresql is_open = 1 AND " . $cat_str .
                ' ORDER BY article_type DESC, article_id DESC';
@@ -69,7 +69,6 @@ function get_cat_articles($cat_id, $page = 1, $size = 20 ,$requirement='',$user_
         while ($row = $GLOBALS['db']->fetchRow($res))
         {
             $article_id = $row['article_id'];
-
             $arr[$article_id]['id']          = $article_id;
             $arr[$article_id]['title']       = $row['title'];
 			$arr[$article_id]['file_url']       = $row['file_url'];
