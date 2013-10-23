@@ -21,18 +21,23 @@
 <div class="body">
 	<!-- #BeginLibraryItem "/library/index_slide.lbi" --><!-- #EndLibraryItem -->
 	<div class="hr-1"></div>
+    <!--{foreach name=list from=$list_arr item=list }-->
+    
 	<div class="index-cat">
-		<div class="title" style="color:#370;">分类标题</div>
-		<div class="line"><div class="in" style="background-color:#370;"></div></div>
+		<div class="title" style="color:{$list.title_color};">{$list.title}</div>
+		<div class="line"><div class="in" style="background-color:{$list.title_color};"></div></div>
 		<div class="panel">
-		<!--{foreach name=goodslist from=$goodslist item=goods }-->
-		<a href="#"><img src="{$goods.goods_img}" /><p class="i"><span class="t">{$goods.goods_name}</span><span class="g">每{$goods.goods_weight}千克</span><span class="p">{$goods.shop_price}</span><span class="bg"></span></p></a>
+		<!--{foreach name=goodslist from=$list.goods item=goods }-->
+		<a href="goods.php?id={$goods.goods_id}"><img src="/pic.php?path={$goods.goods_img}&type={if $goods.index == 0}item_wh368x368{else}item_wh172x172{/if}" /><p class="i"><span class="t">{$goods.goods_name}</span><span class="g">每{$goods.goods_weight}千克</span><span class="p">{$goods.shop_price}</span><span class="bg"></span></p></a>
 		<!--{/foreach}-->
 		</div>
 	</div>
 	<div class="hr-1"></div>
+    <!--{/foreach}-->
 	<div class="col left">
-		<div class="tool"></div>
+		<div class="i-links">
+			<a class="bizhi" target="_blank" title=""></a>
+		</div>
 	</div>
 	<div class="col right"><!-- #BeginLibraryItem "/library/new_index_article.lbi" --><!-- #EndLibraryItem --></div>
 	<div class="hr-1"></div>

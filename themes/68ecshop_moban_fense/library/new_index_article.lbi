@@ -1,59 +1,61 @@
 ﻿<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 {insert_scripts files='slide.js'}
-<div class="i-arts" data-clear-space="true">
-	<div class="bar"><span class="t">商品相关信息</span><a class="more" target="_blank" href="./article_cat.php?id=17">查看所有&gt;&gt;</a></div>
-	<div id="index-articl-slide1" class="sd" data-type="ver" data-speed="700" data-wait-time="6000">
-		<div class="nav"></div>
-		<div class="in"><div class="move">
-			<!--{foreach from=$class_articles_17 item=article}-->
-			<div>
-			<img data-type="item" src="{$article.file_url}" />
-			<a target="_blank" data-type="link" href="{$article.url}"><span class="c"><span class="time">{$article.add_time}</span><span class="title">{$article.title}</span></span><span class="ico"></span></a>
-			</div>
-			<!--{/foreach}-->
-		</div></div>
+<div class="i-arts-panel">
+	<div class="i-arts" data-clear-space="true">
+		<div class="bar"><span class="t">商品相关信息</span><a class="more" target="_blank" href="./article_cat.php?id=17">查看所有&gt;&gt;</a></div>
+		<div id="index-articl-slide1" class="sd" data-type="ver" data-speed="700" data-wait-time="6000">
+			<div class="nav"></div>
+			<div class="in"><div class="move">
+				<!--{foreach from=$class_articles_17 item=article}-->
+				<div>
+				<img data-type="item" src="/pic.php?path={$article.file_url}&type=art_wh219x219" />
+				<a target="_blank" data-type="link" href="{$article.url}"><span class="c"><span class="time">{$article.add_time}</span><span class="title">{$article.title}</span></span><span class="ico"></span></a>
+				</div>
+				<!--{/foreach}-->
+			</div></div>
+		</div>
 	</div>
-</div>
-<div class="i-arts" data-clear-space="true">
-	<div class="bar"><span class="t">妈妈的小贴士</span><a class="more" target="_blank" href="./article_cat.php?id=18">查看所有&gt;&gt;</a></div>
-	<div id="index-articl-slide2" class="sd" data-type="ver" data-speed="700" data-wait-time="6000">
-		<div class="nav"></div>
-		<div class="in"><div class="move">
-			<!--{foreach from=$class_articles_18 item=article}-->
-			<div>
-			<img data-type="item" src="{$article.file_url}" />
-			<a target="_blank" data-type="link" href="{$article.url}"><span class="c"><span class="time">{$article.add_time}</span><span class="title">{$article.title}</span></span><span class="ico"></span></a>
-			</div>
-			<!--{/foreach}-->
-		</div></div>
+	<div class="i-arts" data-clear-space="true">
+		<div class="bar"><span class="t">妈妈的小贴士</span><a class="more" target="_blank" href="./article_cat.php?id=18">查看所有&gt;&gt;</a></div>
+		<div id="index-articl-slide2" class="sd" data-type="ver" data-speed="700" data-wait-time="6000">
+			<div class="nav"></div>
+			<div class="in"><div class="move">
+				<!--{foreach from=$class_articles_18 item=article}-->
+				<div>
+				<img data-type="item" src="/pic.php?path={$article.file_url}&type=art_wh219x219" />
+				<a target="_blank" data-type="link" href="{$article.url}"><span class="c"><span class="time">{$article.add_time}</span><span class="title">{$article.title}</span></span><span class="ico"></span></a>
+				</div>
+				<!--{/foreach}-->
+			</div></div>
+		</div>
 	</div>
-</div>
-<div class="i-arts" data-clear-space="true">
-	<div class="bar"><span class="t">安全农业技术展示</span><a class="more" target="_blank" href="./article_cat.php?id=19">查看所有&gt;&gt;</a></div>
-	<div id="index-articl-slide3" class="sd" data-type="ver" data-speed="700" data-wait-time="6000">
-		<div class="nav"></div>
-		<div class="in"><div class="move">
-			<!--{foreach from=$class_articles_19 item=article}-->
-			<div>
-			<img data-type="item" src="{$article.file_url}" />
-			<a target="_blank" data-type="link" href="{$article.url}"><span class="c"><span class="time">{$article.add_time}</span><span class="title">{$article.title}</span></span><span class="ico"></span></a>
-			</div>
-			<!--{/foreach}-->
-		</div></div>
+	<div class="i-arts" data-clear-space="true">
+		<div class="bar"><span class="t">安全农业技术展示</span><a class="more" target="_blank" href="./article_cat.php?id=19">查看所有&gt;&gt;</a></div>
+		<div id="index-articl-slide3" class="sd" data-type="ver" data-speed="700" data-wait-time="6000">
+			<div class="nav"></div>
+			<div class="in"><div class="move">
+				<!--{foreach from=$class_articles_19 item=article}-->
+				<div>
+				<img data-type="item" src="/pic.php?path={$article.file_url}&type=art_wh219x219" />
+				<a target="_blank" data-type="link" href="{$article.url}"><span class="c"><span class="time">{$article.add_time}</span><span class="title">{$article.title}</span></span><span class="ico"></span></a>
+				</div>
+				<!--{/foreach}-->
+			</div></div>
+		</div>
 	</div>
-</div>
-<div class="i-arts" data-clear-space="true">
-	<div class="bar"><span class="t">农村走访记</span><a class="more" target="_blank" href="./article_cat.php?id=20">查看所有&gt;&gt;</a></div>
-	<div id="index-articl-slide4" class="sd" data-type="ver" data-speed="700" data-wait-time="6000">
-		<div class="nav"></div>
-		<div class="in"><div class="move">
-			<!--{foreach from=$class_articles_20 item=article}-->
-			<div>
-			<img data-type="item" src="{$article.file_url}" />
-			<a target="_blank" data-type="link" href="{$article.url}"><span class="c"><span class="time">{$article.add_time}</span><span class="title">{$article.title}</span></span><span class="ico"></span></a>
-			</div>
-			<!--{/foreach}-->
-		</div></div>
+	<div class="i-arts" data-clear-space="true">
+		<div class="bar"><span class="t">农村走访记</span><a class="more" target="_blank" href="./article_cat.php?id=20">查看所有&gt;&gt;</a></div>
+		<div id="index-articl-slide4" class="sd" data-type="ver" data-speed="700" data-wait-time="6000">
+			<div class="nav"></div>
+			<div class="in"><div class="move">
+				<!--{foreach from=$class_articles_20 item=article}-->
+				<div>
+				<img data-type="item" src="/pic.php?path={$article.file_url}&type=art_wh219x219" />
+				<a target="_blank" data-type="link" href="{$article.url}"><span class="c"><span class="time">{$article.add_time}</span><span class="title">{$article.title}</span></span><span class="ico"></span></a>
+				</div>
+				<!--{/foreach}-->
+			</div></div>
+		</div>
 	</div>
 </div>
 <script>

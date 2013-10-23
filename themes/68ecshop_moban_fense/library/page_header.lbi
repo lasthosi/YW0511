@@ -241,77 +241,77 @@ margin-bottom:7px;
    <script type="text/javascript">
    
    
-     $$(document).ready(function(){
+     $(document).ready(function(){
         
   var xhr;
-    $$('#keyword').keydown(navigateList);
-  $$('#keyword').keyup(getSuggestions);
+    $('#keyword').keydown(navigateList);
+  $('#keyword').keyup(getSuggestions);
 
   $(document).delegate('#suggestions>li', 'mouseover mouseout click', listHover);
   
   function getSuggestions(event){
-      $$('#error').hide();
-     var value=jQuery.trim($$(this).val());
-     var type = $$('.search_type').val();
+      $('#error').hide();
+     var value=jQuery.trim($(this).val());
+     var type = $('.search_type').val();
      if(value==''||event.which==27){
-      $$('#suggestions').empty().hide();
-      $$('#loader').hide();
+      $('#suggestions').empty().hide();
+      $('#loader').hide();
     }
     if((event.which>=65 && event.which<=90)||(event.which>=48&&event.which<=57)||(event.which>=96&&event.which<=105)||event.which==8 ||event.which==46||event.which==32 ){
-      $$('#loader').show();
+      $('#loader').show();
       if(xhr) xhr.abort();
       if(value.length>=1){
-         xhr=$$.get("suggestions.php",{input:value,type:type},showSuggestions,"text");
+         xhr=$.get("suggestions.php",{input:value,type:type},showSuggestions,"text");
         }else{
-          $$('#loader').hide();
+          $('#loader').hide();
         }
     }
  }
  
  function showSuggestions(data){
      if(data==''){
-     $$('#error').html('未检索到数据').show();
-     $$('#suggestions').empty().hide();
+     $('#error').html('未检索到数据').show();
+     $('#suggestions').empty().hide();
    }else{
-     $$('#suggestions').html(data).show();
+     $('#suggestions').html(data).show();
    }
-   $$('#loader').hide();
+   $('#loader').hide();
              
        }
  function navigateList(event){
   switch(event.which){
   case 38://up arrow
-  if($$('#suggestions>li.active').length>0){
-    $$('#suggestions>li.active').removeClass('active').prev().addClass('active');
+  if($('#suggestions>li.active').length>0){
+    $('#suggestions>li.active').removeClass('active').prev().addClass('active');
   }else{
-    $$('#suggestions>li:last').addClass('active');
+    $('#suggestions>li:last').addClass('active');
   }
   break;
   
   case 40://down arrow
-  if($$('#suggestions>li.active').length>0){
-    $$('#suggestions>li.active').removeClass('active').next().addClass('active');
+  if($('#suggestions>li.active').length>0){
+    $('#suggestions>li.active').removeClass('active').next().addClass('active');
   }else{
-    $$('#suggestions>li:first').addClass('active');
+    $('#suggestions>li:first').addClass('active');
   }
   break;
   
   case 13://enter
-  $$('#keyword').val($$('#suggestions>li.active').text());
-  $$('#suggestions').empty().hide();
+  $('#keyword').val($('#suggestions>li.active').text());
+  $('#suggestions').empty().hide();
   break;
   }
  }
  function listHover(event){
    if(event.type=='mouseover'){
-     $$('#suggestions>li.active').removeClass('active');
+     $('#suggestions>li.active').removeClass('active');
    }
-   $$(this).toggleClass('active');
+   $(this).toggleClass('active');
    if(event.type=='click'){
-     $$('#keyword').val($$(this).html());
+     $('#keyword').val($(this).html());
      searchForm.submit();
-     $$(this).parent().empty().hide();
-     $$('#keyword').focus();
+     $(this).parent().empty().hide();
+     $('#keyword').focus();
    }
    
  }

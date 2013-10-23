@@ -438,42 +438,42 @@ function MM_swapImage() { //v3.0
         <!-- #BeginLibraryItem "/library/page_footer.lbi" -->
         <!-- #EndLibraryItem -->
     <script>
-            $$(document).ready(function() {
-                $$('.content1, .content2, .content3,.content4,.content5,.content6').hide();
-                $$('.c1 a span').click(function() {
-                    var text = $$(this).text();
+            $(document).ready(function() {
+                $('.content1, .content2, .content3,.content4,.content5,.content6').hide();
+                $('.c1 a span').click(function() {
+                    var text = $(this).text();
                     switch (text) {
 					case '所有农户':
-                        $$('.content0').show();
-                        $$('.content1, .content2, .content3,.content4,.content5,.content6').hide();
+                        $('.content0').show();
+                        $('.content1, .content2, .content3,.content4,.content5,.content6').hide();
                         break;
                     case '蔬菜农户':
-                        $$('.content1').show();
-                        $$('.content0,.content2, .content3,.content4,.content5,.content6').hide();
+                        $('.content1').show();
+                        $('.content0,.content2, .content3,.content4,.content5,.content6').hide();
                         break;
                     case '水果农户':
-                        $$('.content2').show();
-                        $$('.content0,.content1, .content3,.content4,.content5,.content6').hide();
+                        $('.content2').show();
+                        $('.content0,.content1, .content3,.content4,.content5,.content6').hide();
                         break;
                     case '大米农户':
-                        $$('.content3').show();
-                        $$('.content0, .content2, .content1,.content4,.content5,.content6').hide();
+                        $('.content3').show();
+                        $('.content0, .content2, .content1,.content4,.content5,.content6').hide();
                         break;
                     case '禽蛋农户':
-                        $$('.content4').show();
-                        $$('.content0, .content2, .content3,.content1,.content5,.content6').hide();
+                        $('.content4').show();
+                        $('.content0, .content2, .content3,.content1,.content5,.content6').hide();
                         break;
                     case '畜农户':
-                        $$('.content5').show();
-                        $$('.content0, .content2, .content3,.content4,.content1,.content6').hide();
+                        $('.content5').show();
+                        $('.content0, .content2, .content3,.content4,.content1,.content6').hide();
                         break;
                     case '其他农户':
-                        $$('.content6').show();
-                        $$('.content0, .content2, .content3,.content4,.content5,.content1').hide();
+                        $('.content6').show();
+                        $('.content0, .content2, .content3,.content4,.content5,.content1').hide();
                         break;
                     default:
-                        $$('.content0').show();
-                        $$('.content1, .content2, .content3,.content4,.content5,.content6').hide();
+                        $('.content0').show();
+                        $('.content1, .content2, .content3,.content4,.content5,.content6').hide();
                         break;
                     }
                 });
