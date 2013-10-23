@@ -1,6 +1,5 @@
 ﻿<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-{insert_scripts files='yanshi.js'}
-{insert_scripts files='header.js'}
+{insert_scripts files='new/common.js,yanshi.js,header.js'}
 <div class="head" data-clear-space="true">
 	<div class="in">
 		<div class="left">{insert name='member_info'}</div>

@@ -1,10 +1,5 @@
-div.head-body div.nav div.navc {
+﻿div.head-body div.nav div.navc {
     height: 382px;
-}
-
-div.body {
-    overflow: hidden;
-    _zoom: 1;
 }
 
 #slide {
@@ -245,45 +240,51 @@ div.index-cat {
                 padding: 0px 5px;
                 position: relative;
                 z-index: 2;
+                color: #000;
             }
 
-            div.index-cat a.a p.i span.g, div.index-cat a.b p.i span.g {
-                float: left;
-                color: #0072ff;
-                overflow: hidden;
-                _zoom: 1;
-                padding: 0px 5px;
-                position: relative;
-                z-index: 2;
-                white-space: nowrap;
-                width: 80px;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
+    div.index-cat a.hover p.i span.t {
+        color: #c33b00;
+    }
 
-            div.index-cat a.a p.i span.p, div.index-cat a.b p.i span.p {
-                float: right;
-                color: #ff4e00;
-                overflow: hidden;
-                _zoom: 1;
-                padding: 0px 5px;
-                position: relative;
-                z-index: 2;
-                text-align:right;
-            }
+    div.index-cat a.a p.i span.g, div.index-cat a.b p.i span.g {
+        float: left;
+        color: #0072ff;
+        overflow: hidden;
+        _zoom: 1;
+        padding: 0px 5px;
+        position: relative;
+        z-index: 2;
+        white-space: nowrap;
+        width: 80px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 
-            div.index-cat a.a p.i span.bg, div.index-cat a.b p.i span.bg {
-                position: absolute;
-                display: block;
-                left: 0px;
-                top: 0px;
-                width: 100%;
-                height: 100%;
-                background-color: #fff;
-                opacity: 0.5;
-                filter: alpha(opacity=50)/9;
-                z-index: 1;
-            }
+    div.index-cat a.a p.i span.p, div.index-cat a.b p.i span.p {
+        float: right;
+        color: #c33b00;
+        overflow: hidden;
+        _zoom: 1;
+        padding: 0px 5px;
+        position: relative;
+        z-index: 2;
+        text-align: right;
+        font-weight: bold;
+    }
+
+    div.index-cat a.a p.i span.bg, div.index-cat a.b p.i span.bg {
+        position: absolute;
+        display: block;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        opacity: 0.7;
+        filter: alpha(opacity=70)/9;
+        z-index: 1;
+    }
 
     div.index-cat a img {
         width: 100%;
@@ -309,3 +310,122 @@ div.index-cat {
         overflow: hidden;
         _zoom: 1;
     }
+
+div.i-arts {
+    float: left;
+    _zoom: 1;
+    padding: 0px 0px 27px 27px;
+}
+
+    div.i-arts div.bar {
+        padding: 1px 0px;
+        line-height: 26px;
+        overflow: hidden;
+        _zoom: 1;
+    }
+
+        div.i-arts div.bar span.t {
+            font-size: 20px;
+            font-weight: bold;
+            color: #370;
+            font-family: 'Microsoft YaHei';
+        }
+
+        div.i-arts div.bar a.more {
+            float: right;
+            font-size: 15px;
+        }
+
+    div.i-arts div.sd {
+        overflow: hidden;
+        _zoom: 1;
+        border-top: solid 4px #370;
+    }
+
+        div.i-arts div.sd div.nav {
+            position: relative;
+            z-index: 10;
+            float: left;
+            overflow: visible;
+            width: 200px;
+            border-left: solid 1px #370;
+        }
+
+            div.i-arts div.sd div.nav a {
+                display: block;
+                overflow: visible;
+                white-space: nowrap;
+            }
+
+                div.i-arts div.sd div.nav a span.c {
+                    white-space: normal;
+                    display: inline-block;
+                    _display: inline;
+                    _zoom: 1;
+                    vertical-align: middle;
+                    line-height: 18px;
+                    height: 36px;
+                    padding: 4px 4px 3px 4px;
+                    width: 191px;
+                    margin: 0px;
+                    border-bottom: solid 1px #370;
+                    border-right: solid 1px #370;
+                    overflow: hidden;
+                }
+
+                div.i-arts div.sd div.nav a span.time {
+                    display: inline-block;
+                    _display: inline;
+                    _zoom: 1;
+                    width: 70px;
+                    vertical-align: middle;
+                }
+
+                div.i-arts div.sd div.nav a span.title {
+                    vertical-align: middle;
+                    overflow: hidden;
+                }
+
+                div.i-arts div.sd div.nav a span.ico {
+                    display: inline-block;
+                    _display: inline;
+                    _zoom: 1;
+                    vertical-align: middle;
+                    width: 8px;
+                    height: 36px;
+                    position: relative;
+                    left: -1px;
+                }
+
+                div.i-arts div.sd div.nav a.current {
+                    background-color: #edffe0;
+                    color: #370;
+                }
+
+                    div.i-arts div.sd div.nav a.current span.ico {
+                        background-position: right center;
+                        background-image: url('art-slide-head.gif');
+                        background-repeat: no-repeat;
+                    }
+
+        div.i-arts div.sd div.in {
+            float: right;
+            position: relative;
+            overflow: hidden;
+            width: 219px;
+            height: 219px;
+            border: solid 1px #370;
+            border-left: none;
+            border-top: none;
+        }
+
+            div.i-arts div.sd div.in div.move {
+                position: absolute;
+                overflow: visible;
+                width: 219px;
+            }
+
+                div.i-arts div.sd div.in div.move img {
+                    width: 219px;
+                    height: 219px;
+                }

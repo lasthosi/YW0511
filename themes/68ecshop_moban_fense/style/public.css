@@ -1,5 +1,5 @@
-html, body {
-    font-family: Arial, Helvetica, ËÎÌå, sans-serif;
+ï»¿html, body {
+    font-family: Arial, Helvetica, SimSun, sans-serif;
     margin: 0px;
     padding: 0px;
     font-size: 12px;
@@ -618,6 +618,8 @@ div.hr-1 {
 div.body {
     width: 1126px;
     margin: 0px auto;
+    _zoom: 1;
+    overflow: hidden;
 }
 
     div.body div.col {
@@ -627,14 +629,10 @@ div.body {
 
         div.body div.col.left {
             float: left;
-            _zoom: 1;
-            width: 220px;
+            width: 222px;
         }
 
         div.body div.col.right {
             float: right;
             width: 896px;
-            overflow: hidden;
-            height: 1000px;
-            background-color: #e4e4e4;
         }

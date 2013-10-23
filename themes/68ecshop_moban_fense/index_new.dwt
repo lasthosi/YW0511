@@ -14,7 +14,7 @@
 <link rel="icon" href="animated_favicon.gif" type="image/gif" />
 <link href="{$ecs_tpl_path}public.css" rel="stylesheet" type="text/css" />
 <link href="{$ecs_tpl_path}index.css" rel="stylesheet" type="text/css" />
-{insert_scripts files='jquery-1.10.2.min.js,json2.js'}
+{insert_scripts files='jquery-1.10.2.min.js,json2.js,new/index.js'}
 </head>
 <body>
 <!-- #BeginLibraryItem "/library/new_page_header_a.lbi" --><!-- #EndLibraryItem -->
@@ -26,16 +26,8 @@
 		<div class="line"><div class="in" style="background-color:#370;"></div></div>
 		<div class="panel">
 		<!--{foreach name=goodslist from=$goodslist item=goods }-->
-			<!-- {if $goods.index == '0'}-->
-			<a class="a" href="#"><img src="{$goods.goods_img}" /><p class="i"><span class="t">{$goods.goods_name}</span><span class="g">{$goods.goods_brief}</span><span class="p">￥{$goods.promote_price}元</span><span class="bg"></span></p></a>
-			<!-- {elseif $goods.index == '1'}-->
-			<div class="b">
-				<a class="b" href="#"><img src="{$goods.goods_thumb}"/><p class="i"><span class="t">{$goods.goods_name}</span><span class="g">{$goods.goods_brief}</span><span class="p">￥{$goods.promote_price}元</span><span class="bg"></span></p></a>
-			<!-- {else}-->
-				<a class="b" href="#"><img src="{$goods.goods_thumb}"/><p class="i"><span class="t">{$goods.goods_name}</span><span class="g">{$goods.goods_brief}</span><span class="p">￥{$goods.promote_price}元</span><span class="bg"></span></p></a>
-			<!--{/if}-->
-		<!--{/foreach}-->   
-            </div>
+		<a href="#"><img src="{$goods.goods_img}" /><p class="i"><span class="t">{$goods.goods_name}</span><span class="g">每{$goods.goods_weight}千克</span><span class="p">{$goods.shop_price}</span><span class="bg"></span></p></a>
+		<!--{/foreach}-->
 		</div>
 	</div>
 	<div class="hr-1"></div>

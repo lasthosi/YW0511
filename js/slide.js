@@ -1,5 +1,9 @@
 ﻿/// <reference path="jquery-1.10.2.min.js"/>
 jQuery.slide = function (eltQuery) {
+    var sets = {
+        ver: { key_left: 'top' },
+        hor: { key_left: 'left' }
+    };
     function g_elt() {
         return $(eltQuery)
     }
@@ -25,8 +29,9 @@ jQuery.slide = function (eltQuery) {
         nextElt = indiv.children('[data-i="' + next + '"]:first');
         nextLink = nav.children('[data-i="' + next + '"]:first');
         var curPos = curElt.offsetBy(inpanel), pos = nextElt.offsetBy(inpanel);
+        var set = sets[elt.data('type')];
         if (p > 0) {
-            if (pos.left < curPos.left) {
+            if (pos[set.key_left] < curPos[set.key_left]) {
                 var j = nextElt.index();
                 indiv.children().each(function (i) {
                     if (i <= j) {
@@ -35,14 +40,14 @@ jQuery.slide = function (eltQuery) {
                         return false;
                     }
                 });
-                var x = curPos.left;
+                var x = curPos[set.key_left];
                 curPos = curElt.offsetBy(inpanel);
-                x -= curPos.left;
-                x += parseFloat(indiv.css('left')) || 0;
-                indiv.css('left', x);
+                x -= curPos[set.key_left];
+                x += parseFloat(indiv.css(set.key_left)) || 0;
+                indiv.css(set.key_left, x);
             }
         } else {
-            if (pos.left > curPos.left) {
+            if (pos[set.key_left] > curPos[set.key_left]) {
                 var j = curElt.index();
                 indiv.children().each(function (i) {
                     if (i <= j) {
@@ -51,11 +56,11 @@ jQuery.slide = function (eltQuery) {
                         return false;
                     }
                 });
-                var x = curPos.left;
+                var x = curPos[set.key_left];
                 curPos = curElt.offsetBy(inpanel);
-                x -= curPos.left;
-                x += parseFloat(indiv.css('left')) || 0;
-                indiv.css('left', x);
+                x -= curPos[set.key_left];
+                x += parseFloat(indiv.css(set.key_left)) || 0;
+                indiv.css(set.key_left, x);
             }
         }
         pos = nextElt.offsetBy(inpanel);
@@ -64,7 +69,9 @@ jQuery.slide = function (eltQuery) {
         nextElt.addClass('current');
         nextLink.addClass('current');
         elt.data('current', i);
-        indiv.stop().animate({ left: pos.left > 0 ? '-=' + pos.left : '+=' + (-pos.left) }, elt.data('speed'));
+        var ani = {}
+        ani[set.key_left] = pos[set.key_left] > 0 ? '-=' + pos[set.key_left] : '+=' + (-pos[set.key_left]);
+        indiv.stop().animate(ani, elt.data('speed'));
     }
     function next() {
         var elt = g_elt(), cur = elt.data('current'), indiv = elt.children('.in').children('div').first(), cs = indiv.children();
@@ -83,27 +90,28 @@ jQuery.slide = function (eltQuery) {
         go(cur, -1);
     }
     function init() {
-        var elt = g_elt(), indiv = elt.children('.in').children('div').first(), nav = elt.find('.nav:first'), nav_link_html = nav.html();
+        var elt = g_elt(), indiv = elt.children('.in').children('div').first(), nav = elt.find('.nav:first');
+        elt.data('type', elt.attr('data-type') == 'ver' ? 'ver' : 'hor');
         elt.data('speed', parseInt(elt.attr('data-speed') || 1000));
         elt.data('waitTime', parseInt(elt.attr('data-wait-time') || 2000));
         nav.html('');
         indiv.children().each(function (i, elt) {
-            var t = $(this), link;
-            t.attr('data-i', i);
-            nav.append(nav_link_html);
-            link = nav.children().last();
+            var t = $(this), item = t.children('[data-type="item"]'), link = t.children('[data-type="link"]');
+            item.attr('data-i', i);
             link.attr('data-i', i);
             if (i == 0) {
-                t.addClass('current');
+                item.addClass('current');
                 link.addClass('current');
             }
+            nav.append(link);
+            indiv.append(item);
+            t.remove();
         });
         elt.data('current', 0);
         elt.mouseenter(pause).mouseenter(function () { $(this).addClass('hover'); });
         elt.mouseleave(play).mouseleave(function () { $(this).removeClass('hover'); });
-        nav.delegate('a:not(.current)', 'click', function (e) {
+        nav.delegate('a:not(.current)', 'mouseenter', function (e) {
             var i = parseInt($(e.currentTarget).attr('data-i'));
-
             go(i, g_elt().data('current') > i ? -1 : 1);
         });
         elt.find('.nav-btn:first').delegate('a', 'mouseenter', function (e) {
