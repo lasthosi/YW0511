@@ -1,0 +1,27 @@
+﻿<div class="footer">
+   <!-- {if $navigator_list.bottom} -->
+   <p>
+   <!-- {foreach name=nav_bottom_list from=$navigator_list.bottom item=nav} -->
+        
+        <!-- {if !$smarty.foreach.nav_bottom_list.last} -->
+
+        <!-- {/if} -->
+      <!-- {/foreach} -->
+	  </p>
+  <!-- {/if} -->
+  <p><a href="/zhaomu" target="_blank">加入我们</a><span class="vr"></span><a href="#" target="_blank">联系我们</a><span class="vr"></span><a href="#" target="_blank">友情链接</a></p>
+ <p>{$copyright}</p>
+<p><!-- Skype {foreach from=$skype item=im} -->
+      <!-- {if $im} -->
+      <img src="http://mystatus.skype.com/smallclassic/{$im|escape:url}" alt="Skype" /><a href="skype:{$im|escape:url}?call">{$im}</a>
+      <!-- {/if} -->
+  <!-- {/foreach} -->
+  </p>
+  <!-- ICP 证书{if $icp_number} -->
+  {$lang.icp_number}:<a href="http://www.miibeian.gov.cn/" target="_blank">{$icp_number}</a><br />
+  <!-- 结束ICP 证书{/if} -->
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fc17acd3005b04bcc3bd5712ca120e185' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</div>

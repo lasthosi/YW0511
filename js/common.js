@@ -201,7 +201,7 @@ function getSelectedAttributes(formBuy) {
 
         if (prefix == 'spec_' && (
           ((formBuy.elements[i].type == 'radio' || formBuy.elements[i].type == 'checkbox') && formBuy.elements[i].checked) ||
-          formBuy.elements[i].tagName == 'SELECT')) {
+          formBuy.elements[i].tagName.toLowerCase() == 'select')) {
             spec_arr[j] = formBuy.elements[i].value;
             j++;
         }

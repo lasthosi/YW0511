@@ -1,6 +1,7 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html xmlns:wb="http://open.weibo.com/wb">
 <head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="Keywords" content="{$keywords}" />
 <meta name="Description" content="{$description}" />
@@ -14,44 +15,42 @@
 <link rel="icon" href="animated_favicon.gif" type="image/gif" />
 <link href="{$ecs_tpl_path}public.css" rel="stylesheet" type="text/css" />
 <link href="{$ecs_tpl_path}index.css" rel="stylesheet" type="text/css" />
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
 {insert_scripts files='jquery-1.10.2.min.js,json2.js,new/index.js'}
 </head>
 <body>
 <!-- #BeginLibraryItem "/library/new_page_header_a.lbi" --><!-- #EndLibraryItem -->
 <div class="body">
 	<!-- #BeginLibraryItem "/library/index_slide.lbi" --><!-- #EndLibraryItem -->
-	<div class="hr-1"></div>
     <!--{foreach name=list from=$list_arr item=list }-->
-    
+    <div class="hr-2"></div>
 	<div class="index-cat">
 		<div class="title" style="color:{$list.title_color};">{$list.title}</div>
 		<div class="line"><div class="in" style="background-color:{$list.title_color};"></div></div>
 		<div class="panel">
 		<!--{foreach name=goodslist from=$list.goods item=goods }-->
-		<a href="goods.php?id={$goods.goods_id}"><img src="/pic.php?path={$goods.goods_img}&type={if $goods.index == 0}item_wh368x368{else}item_wh172x172{/if}" /><p class="i"><span class="t">{$goods.goods_name}</span><span class="g">每{$goods.goods_weight}千克</span><span class="p">{$goods.shop_price}</span><span class="bg"></span></p></a>
+		<a href="goods.php?id={$goods.goods_id}"><img src="/pic.php?path={$goods.goods_img}&type={if $goods.index == 0}item_wh368x368{else}item_wh172x172{/if}" /><p class="i"><span class="t">{$goods.goods_name}</span><span class="g">每{$goods.goods_weight}千克</span><span class="p">{$goods.shop_price}</span><span class="bg"></span><button class="add2cart" data-fun="add2cart" data-goods-id="{$goods.goods_id}" data-goods-parent="0"><span class="txt">添加到购物车</span><span class="ico"></span></button></p></a>
 		<!--{/foreach}-->
 		</div>
 	</div>
-	<div class="hr-1"></div>
     <!--{/foreach}-->
+	<div class="hr-2"></div>
 	<div class="col left">
 		<div class="i-links">
-			<a class="bizhi" target="_blank" title=""></a>
+			<a class="bizhi" target="_blank" href="/picshow" title="原味调色板·壁纸库"></a>
+			<div class="hr"></div>
+			<a class="lxn" target="_blank" href="/zhaomu" title="申请加盟良心农"></a>
+			<div class="hr"></div>
+			<a class="fanfan" target="_blank" href="/article_cat.php?id=22" title="我们大家的饭饭"></a>
+			<div class="hr"></div>
+			<a class="tiyan" target="_blank" href="/user.php?username=test&password=111111&act=act_login" title="套餐体验"></a>
 		</div>
 	</div>
 	<div class="col right"><!-- #BeginLibraryItem "/library/new_index_article.lbi" --><!-- #EndLibraryItem --></div>
-	<div class="hr-1"></div>
-	<div class="footer"></div>
+	<div class="hr-2"></div>
+	<!-- #BeginLibraryItem "/library/new_help.lbi" --><!-- #EndLibraryItem -->
+	<div class="hr-2"></div>
+	<!-- #BeginLibraryItem "/library/new_footer.lbi" --><!-- #EndLibraryItem -->
 </div>
-
-
-
-<!--鼠标切换js Star-->
-<div class="blank"></div>
-<!-- #BeginLibraryItem "/library/help.lbi" --><!-- #EndLibraryItem -->
-<!--{if $img_links  or $txt_links }-->
-</div> 
-<!--{/if}-->
-<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
 </body>
 </html>

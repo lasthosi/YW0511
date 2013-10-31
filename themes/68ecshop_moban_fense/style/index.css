@@ -224,8 +224,8 @@ div.index-cat {
             position: absolute;
             left: 0px;
             right: 0px;
-            bottom: 0px;
-            padding: 2px 0px;
+            bottom: -30px;
+            padding: 2px 0px 0px 0px;
             margin: 0px;
             line-height: 18px;
             font-size: 12px;
@@ -291,6 +291,7 @@ div.index-cat {
         height: 100%;
         margin: 0px;
         border: none;
+        position: relative;
     }
 
     div.index-cat div.b {
@@ -311,11 +312,50 @@ div.index-cat {
         _zoom: 1;
     }
 
+    div.index-cat a button.add2cart {
+        display: block;
+        _zoom: 1;
+        width: 100%;
+        padding: 0px;
+        height: 30px;
+        text-align: right;
+        position: relative;
+        z-index: 3;
+        background: none;
+        background-color: #f40;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        outline: none;
+    }
+
+        div.index-cat a button.add2cart span {
+            vertical-align: middle;
+        }
+
+            div.index-cat a button.add2cart span.txt {
+                line-height: 1;
+            }
+
+            div.index-cat a button.add2cart span.ico {
+                display: inline-block;
+                _display: inline;
+                _zoom: 1;
+                background-position: center center;
+                margin: 2px 2px 2px 4px;
+                border-left: solid 1px #fff;
+                width: 34px;
+                height: 26px;
+                background-image: url('ico-cart-quick.png');
+                background-repeat: no-repeat;
+                overflow: hidden;
+            }
+
 div.i-arts-panel {
     border: solid 1px #eee;
     overflow: hidden;
     _zoom: 1;
-    padding: 0px 0px 17px 17px;
+    padding: 0px 0px 15px 17px;
 }
 
 div.i-arts {
@@ -453,3 +493,21 @@ div.i-links {
         div.i-links a.bizhi {
             background-image: url('link-bizhi.jpg');
         }
+
+        div.i-links a.lxn {
+            background-image: url('link-lxn.jpg');
+        }
+
+        div.i-links a.fanfan {
+            background-image: url('link-fanfan.jpg');
+        }
+
+        div.i-links a.tiyan {
+            background-image: url('link-tiyan.jpg');
+        }
+
+    div.i-links div.hr {
+        clear: both;
+        height: 27px;
+        overflow: hidden;
+    }

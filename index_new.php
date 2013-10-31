@@ -218,8 +218,19 @@ $smarty->assign('class_articles_20',    index_get_class_articles(20,5)); // 分�
         }
         $smarty->assign('cat_rec', $cat_rec);
     }
-
-    /* 页面中的动态内容 */
+	
+	$list_arr=array();
+	for($i=1;$i<11;$i++){
+		if($_CFG['index_list_goods_id'.$i]){
+	$list['goods'] = category_get_goods($_CFG['index_list_goods_id'.$i]);
+	$list['title']=$_CFG['index_list_title'.$i];
+	$list['title_color']=$_CFG['index_list_title_color'.$i];
+	$list_arr[]=$list;
+		}
+	}
+	
+	$smarty->assign('list_arr', $list_arr);
+	
     assign_dynamic('index');
 }
 
@@ -457,136 +468,112 @@ function index_get_class_articles($cat_aid, $cat_num)
 }
 
 
+/**
+ * 获得分类下的商品
+ *
+ * @access  public
+ * @param   string  $children
+ * @return  array
+ */
+function category_get_goods($goods)
+{
+    $display = $GLOBALS['display'];
+    $where = "g.is_on_sale = 1 AND g.is_alone_sale = 1 AND ".
+            "g.is_delete = 0 AND g.goods_id in (".$goods.")";
 
+    if ($brand > 0)
+    {
+        $where .=  "AND g.brand_id=$brand ";
+    }
 
+    if ($min > 0)
+    {
+        $where .= " AND g.shop_price >= $min ";
+    }
 
-?><CENTER>
-    <TABLE id=AutoNumber1 style="BORDER-COLLAPSE: collapse" borderColor=#111111 
-cellSpacing=0 cellPadding=0 width="100%" background=images/topback.gif 
-border=0>
-      
-    <DIV align=center> 
-      <CENTER>
-      </CENTER>
-    </DIV>
-</CENTER></DIV>
-<div id="floater" style="position:absolute; width:53px; z-index:1; height: 24px; left: 770px; top: 394px;"> 
-  <script language="JavaScript">
-      
-self.onError=null;      
-currentX = currentY =0;      
-whichIt = null;      
-lastScrollX =-10; lastScrollY = -100;      
-NS = (document.layers) ? 1 : 0;      
-IE = (document.all) ? 1: 0;      
-<!-- STALKER CODE -->      
-function heartBeat() {      
-if(IE) { diffY = document.body.scrollTop; diffX = document.body.scrollLeft; }      
-if(NS) { diffY = self.pageYOffset; diffX = self.pageXOffset; }      
-if(diffY != lastScrollY) {      
-percent = .1 * (diffY - lastScrollY);      
-if(percent > 0) percent = Math.ceil(percent);      
-else percent = Math.floor(percent);      
-if(IE) document.all.floater.style.pixelTop += percent;      
-if(NS) document.floater.top += percent;      
-lastScrollY = lastScrollY + percent;      
-}      
-if(diffX != lastScrollX) {      
-percent = .1 * (diffX - lastScrollX);      
-if(percent > 0) percent = Math.ceil(percent);      
-else percent = Math.floor(percent);      
-if(IE) document.all.floater.style.pixelLeft += percent;      
-if(NS) document.floater.left += percent;      
-lastScrollX = lastScrollX + percent;      
-}      
-}      
-<!-- /STALKER CODE -->      
-<!-- DRAG DROP CODE -->      
-function checkFocus(x,y) {      
-stalkerx = document.floater.pageX;      
-stalkery = document.floater.pageY;      
-stalkerwidth = document.floater.clip.width;      
-stalkerheight = document.floater.clip.height;      
-if( (x > stalkerx && x < (stalkerx+stalkerwidth)) && (y > stalkery && y < (stalkery+stalkerheight))) return true;      
-else return false;      
-}      
-function grabIt(e) {      
-if(IE) {      
-whichIt = event.srcElement;      
-while (whichIt.id.indexOf("floater") == -1) {      
-whichIt = whichIt.parentElement;      
-if (whichIt == null) { return true; }      
-}      
-whichIt.style.pixelLeft = whichIt.offsetLeft;      
-whichIt.style.pixelTop = whichIt.offsetTop;      
-currentX = (event.clientX + document.body.scrollLeft);      
-currentY = (event.clientY + document.body.scrollTop);      
-} else {      
-window.captureEvents(Event.MOUSEMOVE);      
-if(checkFocus (e.pageX,e.pageY)) {      
-whichIt = document.floater;      
-StalkerTouchedX = e.pageX-document.floater.pageX;      
-StalkerTouchedY = e.pageY-document.floater.pageY;      
-}      
-}      
-return true;      
-}      
-function moveIt(e) {      
-if (whichIt == null) { return false; }      
-if(IE) {      
-newX = (event.clientX + document.body.scrollLeft);      
-newY = (event.clientY + document.body.scrollTop);      
-distanceX = (newX - currentX); distanceY = (newY - currentY);      
-currentX = newX; currentY = newY;      
-whichIt.style.pixelLeft += distanceX;      
-whichIt.style.pixelTop += distanceY;      
-if(whichIt.style.pixelTop < document.body.scrollTop) whichIt.style.pixelTop = document.body.scrollTop;      
-if(whichIt.style.pixelLeft < document.body.scrollLeft) whichIt.style.pixelLeft = document.body.scrollLeft;      
-if(whichIt.style.pixelLeft > document.body.offsetWidth - document.body.scrollLeft - whichIt.style.pixelWidth - 20) whichIt.style.pixelLeft = document.body.offsetWidth - whichIt.style.pixelWidth - 20;      
-if(whichIt.style.pixelTop > document.body.offsetHeight + document.body.scrollTop - whichIt.style.pixelHeight - 5) whichIt.style.pixelTop = document.body.offsetHeight + document.body.scrollTop - whichIt.style.pixelHeight - 5;      
-event.returnValue = false;      
-} else {      
-whichIt.moveTo(e.pageX-StalkerTouchedX,e.pageY-StalkerTouchedY);      
-if(whichIt.left < 0+self.pageXOffset) whichIt.left = 0+self.pageXOffset;      
-if(whichIt.top < 0+self.pageYOffset) whichIt.top = 0+self.pageYOffset;      
-if( (whichIt.left + whichIt.clip.width) >= (window.innerWidth+self.pageXOffset-17)) whichIt.left = ((window.innerWidth+self.pageXOffset)-whichIt.clip.width)-17;      
-if( (whichIt.top + whichIt.clip.height) >= (window.innerHeight+self.pageYOffset-17)) whichIt.top = ((window.innerHeight+self.pageYOffset)-whichIt.clip.height)-17;      
-return false;      
-}      
-return false;      
-}      
-function dropIt() {      
-whichIt = null;      
-if(NS) window.releaseEvents (Event.MOUSEMOVE);      
-return true;      
-}      
-<!-- DRAG DROP CODE -->      
-if(NS) {      
-window.captureEvents(Event.MOUSEUP|Event.MOUSEDOWN);      
-window.onmousedown = grabIt;      
-window.onmousemove = moveIt;      
-window.onmouseup = dropIt;      
-}      
-if(IE) {      
-document.onmousedown = grabIt;      
-document.onmousemove = moveIt;      
-document.onmouseup = dropIt;      
-}      
-if(NS || IE) action = window.setInterval("heartBeat()",1);      
-</script>
+    if ($max > 0)
+    {
+        $where .= " AND g.shop_price <= $max ";
+    }
 
-<div style="display:none">not_del</div>
+    /* 获得商品列表 */
+     $sql = 'SELECT g.goods_id, g.goods_name, g.goods_name_style, g.market_price,g.goods_weight,g.is_new, g.is_best, g.is_hot,b.address,b.brand_name,g.biaozhun, g.shop_price AS org_price, ' .
+                "IFNULL(mp.user_price, g.shop_price * '$_SESSION[discount]') AS shop_price, g.promote_price, g.goods_type, " .
+                'g.promote_start_date, g.promote_end_date, g.goods_brief, g.goods_thumb , g.goods_img ' .
+            'FROM ' . $GLOBALS['ecs']->table('goods') . ' AS g ' .
+            'LEFT JOIN ' . $GLOBALS['ecs']->table('member_price') . ' AS mp ' .
+                "ON mp.goods_id = g.goods_id AND mp.user_rank = '$_SESSION[user_rank]' " .
+            'LEFT JOIN ' . $GLOBALS['ecs']->table('brand') . ' AS b ' .
+                "ON b.brand_id = g.brand_id " .
+            "WHERE $where ";
+    $res = $GLOBALS['db']->getAll($sql);
 
-<script type="text/javascript">
+    $arr = array();
+    foreach ($res as $row)
+    {
+        if ($row['promote_price'] > 0)
+        {
+            $promote_price = bargain_price($row['promote_price'], $row['promote_start_date'], $row['promote_end_date']);
+        }
+        else
+        {
+            $promote_price = 0;
+        }
 
-$(document).ready(function(){
+        /* 处理商品水印图片 */
+        $watermark_img = '';
 
-while( $('div').last().html()!="not_del"){
+        if ($promote_price != 0)
+        {
+            $watermark_img = "watermark_promote_small";
+        }
+        elseif ($row['is_new'] != 0)
+        {
+            $watermark_img = "watermark_new_small";
+        }
+        elseif ($row['is_best'] != 0)
+        {
+            $watermark_img = "watermark_best_small";
+        }
+        elseif ($row['is_hot'] != 0)
+        {
+            $watermark_img = 'watermark_hot_small';
+        }
 
-$('div').last().detach();
+        if ($watermark_img != '')
+        {
+            $arr[$row['goods_id']]['watermark_img'] =  $watermark_img;
+        }
 
+        $arr[$row['goods_id']]['goods_id']         = $row['goods_id'];
+        if($display == 'grid')
+        {
+            $arr[$row['goods_id']]['goods_name']       = $GLOBALS['_CFG']['goods_name_length'] > 0 ? sub_str($row['goods_name'], $GLOBALS['_CFG']['goods_name_length']) : $row['goods_name'];
+        }
+        else
+        {
+            $arr[$row['goods_id']]['goods_name']       = $row['goods_name'];
+        }
+        $arr[$row['goods_id']]['name']             = $row['goods_name'];
+        $arr[$row['goods_id']]['goods_brief']      = $row['goods_brief'];
+        $arr[$row['goods_id']]['goods_style_name'] = add_style($row['goods_name'],$row['goods_name_style']);
+        $arr[$row['goods_id']]['market_price']     = price_format($row['market_price']);
+        $arr[$row['goods_id']]['shop_price']       = price_format($row['shop_price']);
+        $arr[$row['goods_id']]['type']             = $row['goods_type'];
+        $arr[$row['goods_id']]['promote_price']    = ($promote_price > 0) ? price_format($promote_price) : '';
+        $arr[$row['goods_id']]['goods_thumb']      = get_image_path($row['goods_id'], $row['goods_thumb'], true);
+        $arr[$row['goods_id']]['goods_img']        = get_image_path($row['goods_id'], $row['goods_img']);
+        $arr[$row['goods_id']]['url']              = build_uri('goods', array('gid'=>$row['goods_id']), $row['goods_name']);
+        //二次开发，增加显示商品的状态
+        $arr[$row['goods_id']]['is_new']		   = $row['is_new'];
+        $arr[$row['goods_id']]['is_hot']		   = $row['is_hot'];
+        $arr[$row['goods_id']]['is_best'] 		   = $row['is_best'];
+        $arr[$row['goods_id']]['goods_weight']	   = $row['goods_weight'];
+        $arr[$row['goods_id']]['address']	   = $row['address'];
+        $arr[$row['goods_id']]['biaozhun']     = $row['biaozhun'];
+        $arr[$row['goods_id']]['brand_name']     = $row['brand_name'];
+    }
+
+    return $arr;
 }
-
-});
-
-</script>
+?>

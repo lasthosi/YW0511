@@ -9,9 +9,11 @@
 a {
     text-decoration: none;
     color: #4f4f4f;
+    cursor: pointer;
+    position: relative;
 }
 
-    a:hover {
+    a.hover {
         color: #f40;
     }
 
@@ -72,45 +74,9 @@ div.head {
             _display: inline;
             _zoom: 1;
             margin: 0px;
-            padding: 8px 8px;
             height: 14px;
+            width: 8px;
             overflow: hidden;
-        }
-
-            div.head div.in span.vr span {
-                height: 100%;
-                display: block;
-                _zoom: 1;
-                overflow: hidden;
-                width: 1px;
-                background-color: #969696;
-            }
-
-        div.head div.in span.ico {
-            background-position: center center;
-            display: inline-block;
-            _display: inline;
-            _zoom: 1;
-            overflow: hidden;
-            background-repeat: no-repeat;
-            height: 20px;
-            margin: 5px 5px 5px 0px;
-        }
-
-        div.head div.in a.kefu span.ico {
-            background-image: url('ico-kefu.png');
-            width: 25px;
-            _background-image: none;
-            _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/themes/68ecshop_moban_fense/style/ico-kefu.png',sizingMethod='scale');
-            vertical-align: middle;
-        }
-
-        div.head div.in a.tel span.ico {
-            background-image: url('ico-tel.png');
-            width: 25px;
-            _background-image: none;
-            _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/themes/68ecshop_moban_fense/style/ico-tel.png',sizingMethod='scale');
-            vertical-align: middle;
         }
 
 div.head-body {
@@ -127,22 +93,35 @@ div.head-body {
     }
 
     div.head-body div.tool {
-        background-position: 10px 38px;
         overflow: visible;
         _zoom: 1;
-        background-image: url('logo.gif');
-        background-repeat: no-repeat;
-        height: 154px;
+        height: 120px;
         position: relative;
     }
+
+        div.head-body div.tool a.logo {
+            cursor: pointer;
+            background-image: url('logo.png');
+            background-repeat: no-repeat;
+            position: absolute;
+            left: 0px;
+            top: 20px;
+            height: 80px;
+            width: 236px;
+            overflow: hidden;
+            display: block;
+            _zoom: 1;
+            _background-image: none;
+            _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/themes/68ecshop_moban_fense/style/logo.png',sizingMethod='scale');
+        }
 
         div.head-body div.tool div.search {
             float: left;
             _zoom: 1;
             overflow: visible;
             position: absolute;
-            left: 350px;
-            top: 46px;
+            left: 330px;
+            top: 33px;
         }
 
             div.head-body div.tool div.search div.form {
@@ -165,6 +144,7 @@ div.head-body {
                     position: absolute;
                     left: 2px;
                     top: 2px;
+                    z-index: 600;
                 }
 
                     div.head-body div.tool div.search div.form div.select.hover {
@@ -249,7 +229,7 @@ div.head-body {
             position: absolute;
             overflow: visible;
             right: 0px;
-            top: 50px;
+            top: 66px;
             _zoom: 1;
         }
 
@@ -381,6 +361,56 @@ div.head-body {
                         margin-left: 5px;
                         border-bottom: dotted 1px #d5d5d5;
                     }
+
+            div.head-body div.tool div.right.links {
+                top: 26px;
+            }
+
+                div.head-body div.tool div.right.links a {
+                    vertical-align: middle;
+                    color: #370;
+                }
+
+                    div.head-body div.tool div.right.links a.hover {
+                        text-decoration: underline;
+                    }
+
+                    div.head-body div.tool div.right.links a span.ico {
+                        background-position: center top;
+                        width: 26px;
+                        height: 26px;
+                        display: inline-block;
+                        _display: inline;
+                        _zoom: 1;
+                        overflow: hidden;
+                        vertical-align: middle;
+                        background-repeat: no-repeat;
+                        margin-right: 10px;
+                    }
+
+                    div.head-body div.tool div.right.links a.kefu span.ico {
+                        background-image: url('ico-kefu.png');
+                        _background: none;
+                        _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/themes/68ecshop_moban_fense/style/ico-kefu.png',sizingMethod='scale');
+                    }
+
+                    div.head-body div.tool div.right.links a.contact span.ico {
+                        background-image: url('ico-contact.png');
+                        _background: none;
+                        _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/themes/68ecshop_moban_fense/style/ico-contact.png',sizingMethod='scale');
+                    }
+
+                div.head-body div.tool div.right.links span.vr {
+                    display: inline-block;
+                    _display: inline;
+                    _zoom: 1;
+                    vertical-align: middle;
+                    height: 26px;
+                    width: 1px;
+                    overflow: hidden;
+                    background-color: #370;
+                    margin: 0px 10px;
+                }
 
     div.head-body div.nav {
         position: relative;
@@ -523,16 +553,28 @@ div.head-body {
                                 _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/themes/68ecshop_moban_fense/style/ico-cat-64.png',sizingMethod='scale');
                             }
 
-                            div.head-body div.nav div.navc div.link a span.ico.cat78 {
-                                background-image: url('ico-cat-78.png');
-                                _background: none;
-                                _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/themes/68ecshop_moban_fense/style/ico-cat-78.png',sizingMethod='scale');
-                            }
-
                             div.head-body div.nav div.navc div.link a span.ico.cat80 {
                                 background-image: url('ico-cat-80.png');
                                 _background: none;
                                 _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/themes/68ecshop_moban_fense/style/ico-cat-80.png',sizingMethod='scale');
+                            }
+
+                            div.head-body div.nav div.navc div.link a span.ico.cat92 {
+                                background-image: url('ico-cat-92.png');
+                                _background: none;
+                                _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/themes/68ecshop_moban_fense/style/ico-cat-92.png',sizingMethod='scale');
+                            }
+
+                            div.head-body div.nav div.navc div.link a span.ico.cat93 {
+                                background-image: url('ico-cat-93.png');
+                                _background: none;
+                                _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/themes/68ecshop_moban_fense/style/ico-cat-93.png',sizingMethod='scale');
+                            }
+
+                            div.head-body div.nav div.navc div.link a span.ico.cat94 {
+                                background-image: url('ico-cat-94.png');
+                                _background: none;
+                                _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/themes/68ecshop_moban_fense/style/ico-cat-94.png',sizingMethod='scale');
                             }
 
                     div.head-body div.nav div.navc div.link a:hover {
@@ -614,6 +656,14 @@ div.hr-1 {
     clear: both;
 }
 
+div.hr-2 {
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    _zoom: 1;
+    height: 20px;
+    clear: both;
+}
 
 div.body {
     width: 1126px;
@@ -635,4 +685,178 @@ div.body {
         div.body div.col.right {
             float: right;
             width: 896px;
+        }
+
+div.help {
+    border-top: solid 1px #eee;
+    overflow: hidden;
+    _zoom: 1;
+    padding-top: 15px;
+}
+
+    div.help div.item {
+        float: left;
+        overflow: hidden;
+        _zoom: 1;
+        width: 250px;
+        margin-left: 30px;
+    }
+
+        div.help div.item div.bar {
+            height: 26px;
+            padding-bottom: 10px;
+        }
+
+            div.help div.item div.bar span.ico {
+                background-position: center center;
+                display: inline-block;
+                _display: inline;
+                _zoom: 1;
+                vertical-align: middle;
+                width: 60px;
+                height: 26px;
+                background-repeat: no-repeat;
+            }
+
+        div.help div.item.i5 div.bar span.ico {
+            background-image: url('ico-help-5.gif');
+        }
+
+        div.help div.item.i6 div.bar span.ico {
+            background-image: url('ico-help-6.gif');
+        }
+
+        div.help div.item.i7 div.bar span.ico {
+            background-image: url('ico-help-7.gif');
+        }
+
+        div.help div.item.i9 div.bar span.ico {
+            background-image: url('ico-help-9.gif');
+        }
+
+        div.help div.item div.bar span.title {
+            vertical-align: middle;
+            font: bold 14px/26px "微软雅黑";
+        }
+
+        div.help div.item div.list {
+            margin-left: 30px;
+            padding-left: 30px;
+            border-left: dotted 1px #bbb;
+            height: 96px;
+        }
+
+            div.help div.item div.list p {
+                display: block;
+                line-height: 24px;
+                margin: 0px;
+            }
+
+                div.help div.item div.list p a {
+                }
+
+div.help-tedian {
+    border: solid 1px #eee;
+    overflow: hidden;
+    _zoom: 1;
+    text-align: center;
+    height: 78px;
+}
+
+    div.help-tedian a.item {
+        display: inline-block;
+        _display: inline;
+        _zoom: 1;
+        width: 214px;
+        overflow: hidden;
+        _zoom: 1;
+        position: relative;
+        vertical-align: middle;
+        text-align: left;
+        padding: 5px;
+    }
+
+        div.help-tedian a.item.hover {
+            color: #370;
+        }
+
+    div.help-tedian span.vr {
+        height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+        width: 1px;
+        padding: 0px;
+        margin: 0px;
+        background-color: #eee;
+    }
+
+    div.help-tedian a.item span.ico {
+        background-position: center center;
+        display: inline-block;
+        _display: inline;
+        _zoom: 1;
+        width: 58px;
+        height: 58px;
+        vertical-align: middle;
+        border-right: solid 1px #eee;
+        background-repeat: no-repeat;
+    }
+
+    div.help-tedian a.item.i1 span.ico {
+        background-image: url('ico-help-tedian-i1.png');
+    }
+
+    div.help-tedian a.item.i2 span.ico {
+        background-image: url('ico-help-tedian-i2.png');
+    }
+
+    div.help-tedian a.item.i3 span.ico {
+        background-image: url('ico-help-tedian-i3.png');
+    }
+
+    div.help-tedian a.item.i4 span.ico {
+        background-image: url('ico-help-tedian-i4.png');
+    }
+
+    div.help-tedian a.item.i5 span.ico {
+        background-image: url('ico-help-tedian-i5.png');
+    }
+
+    div.help-tedian a.item span.b {
+        display: inline-block;
+        _display: inline;
+        _zoom: 1;
+        width: 150px;
+        padding: 0px;
+        vertical-align: middle;
+    }
+
+    div.help-tedian a.item span.t {
+        display: block;
+        color: #f58000;
+        font-size: 15px;
+        font-family: 'Microsoft YaHei';
+        padding-bottom: 6px;
+    }
+
+    div.help-tedian a.item span.d {
+        display: block;
+    }
+
+div.footer {
+    text-align: center;
+}
+
+    div.footer span, div.footer a {
+        vertical-align: middle;
+    }
+
+        div.footer span.vr {
+            display: inline-block;
+            _display: inline;
+            _zoom: 1;
+            height: 12px;
+            background-color: #4f4f4f;
+            width: 1px;
+            margin: 0px 12px;
         }

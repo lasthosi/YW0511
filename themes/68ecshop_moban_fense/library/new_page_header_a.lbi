@@ -4,14 +4,16 @@
 	<div class="in">
 		<div class="left">{insert name='member_info'}</div>
 		<div class="right">    
-			<a class="kefu" href="#"><span class="ico"></span><span>在线客服</span></a><span class="vr"><span></span></span>
-			<a class="tel"><span class="ico"></span><span>销售/客服4008-xxx-xxx</span></a>
+			<a>收藏本站</a>
+			<span class="vr"></span>
+			<wb:follow-button uid="3188300741" type="red_2" width="136" height="24" ></wb:follow-button>
 		</div>
 	</div>
 </div>
 <div class="head-body">
 	<div class="show"></div>
 	<div class="tool">
+		<a class="logo" href="/" title="返回首页"></a>
 		<div class="search">
 			<div class="form">
 				<form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" style="_position:relative; top:5px;">
@@ -29,6 +31,10 @@
 			</div>
 		</div>
 		<input type="hidden" value="{$smarty.session.user_id}" id="user_id" name="user_id"/>
+		<div class="right links">
+			<a class="kefu" href="#"><span class="ico"></span><span>在线客服</span></a><span class="vr"><span></span></span>
+			<a class="contact"><span class="ico"></span><span>销售/客服4008-xxx-xxx</span></a>
+		</div>
 		<div class="right" data-clear-space="true">
 			<div class="info user">
 				<div class="tab"><a href="http://www.yw0511.com/user.php"><span class="ico"></span><span>我的原味</span></a></div>

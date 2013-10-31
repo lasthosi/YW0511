@@ -1,0 +1,57 @@
+﻿<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="help">
+<!--{if $helps}-->
+<!--{foreach from=$helps item=help_cat key=key}-->
+	<div class="item i{$key}">
+		<div class="bar"><span class="ico"></span><span class="title">{$help_cat.cat_name}</span></div>
+		<div class="list">
+		<!--{foreach from=$help_cat.article item=item}-->
+			<p><a href="{$item.url}" target="_blank" title="{$item.title|escape:html}">{$item.short_title}</a></p>
+		<!--{/foreach}-->
+		</div>
+	</div>
+<!--{/foreach}-->
+<!--{/if}-->
+</div>
+<div class="hr-2"></div>
+<div class="help-tedian" data-clear-space="true">
+	<a class="item i1">
+		<span class="ico"></span>
+		<span class="b">
+			<span class="t">接近极致的鲜度</span>
+			<span class="d">当天采摘当天配送</span>
+		</span>
+	</a>
+	<span class="vr"></span>
+	<a class="item i2">
+		<span class="ico"></span>
+		<span class="b">
+			<span class="t">速测/分光光度计检测</span>
+			<span class="d">种植过程0农药的实时监督</span>
+		</span>
+	</a>
+	<span class="vr"></span>
+	<a class="item i3">
+		<span class="ico"></span>
+		<span class="b">
+			<span class="t">7*24小时营业</span>
+			<span class="d">全年无休</span>
+		</span>
+	</a>
+	<span class="vr"></span>
+	<a class="item i4">
+		<span class="ico"></span>
+		<span class="b">
+			<span class="t">满100免运费(未执行)</span>
+			<span class="d">每周三、六配送</span>
+		</span>
+	</a>
+	<span class="vr"></span>
+	<a class="item i5">
+		<span class="ico"></span>
+		<span class="b">
+			<span class="t">原味标准</span>
+			<span class="d">展示商品在平台的标准</span>
+		</span>
+	</a>
+</div>
